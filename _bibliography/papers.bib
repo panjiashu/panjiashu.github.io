@@ -3,12 +3,29 @@
 
 @string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@article{astroconformer,
+    author = {Pan, Jia-Shu and Ting, Yuan-Sen and Yu, Jie},
+    title = "{Astroconformer: The prospects of analysing stellar light curves with transformer-based deep learning models}",
+    journal = {Monthly Notices of the Royal Astronomical Society},
+    volume = {528},
+    number = {4},
+    pages = {5890-5903},
+    year = {2024},
+    month = {01},
+    abstract = "{Stellar light curves contain valuable information about oscillations and granulation, offering insights into stars’ internal structures and evolutionary states. Traditional asteroseismic techniques, primarily focused on power spectral analysis, often overlook the crucial phase information in these light curves. Addressing this gap, recent machine learning applications, particularly those using Convolutional Neural Networks (CNNs), have made strides in inferring stellar properties from light curves. However, CNNs are limited by their localized feature extraction capabilities. In response, we introduce Astroconformer, a Transformer-based deep learning framework, specifically designed to capture long-range dependencies in stellar light curves. Our empirical analysis centres on estimating surface gravity (log g), using a data set derived from single-quarter Kepler light curves with log g values ranging from 0.2 to 4.4. Astroconformer demonstrates superior performance, achieving a root-mean-square-error (RMSE) of 0.017 dex at log g ≈ 3 in data-rich regimes and up to 0.1 dex in sparser areas. This performance surpasses both K-nearest neighbour models and advanced CNNs. Ablation studies highlight the influence of receptive field size on model effectiveness, with larger fields correlating to improved results. Astroconformer also excels in extracting νmax with high precision. It achieves less than 2 per cent relative median absolute error for 90-d red giant light curves. Notably, the error remains under 3 per cent for 30-d light curves, whose oscillations are undetectable by a conventional pipeline in 30 per cent cases. Furthermore, the attention mechanisms in Astroconformer align closely with the characteristics of stellar oscillations and granulation observed in light curves.}",
+    issn = {0035-8711},
+    doi = {10.1093/mnras/stae068},
+    url = {https://doi.org/10.1093/mnras/stae068},
+    eprint = {https://academic.oup.com/mnras/article-pdf/528/4/5890/56707271/stae068.pdf},
+}
+
+@misc{scaling,
+      title={The Scaling Law in Stellar Light Curves}, 
+      author={Jia-Shu Pan and Yuan-Sen Ting and Yang Huang and Jie Yu and Ji-Feng Liu},
+      year={2024},
+      eprint={2405.17156},
+      archivePrefix={arXiv},
+      primaryClass={astro-ph.IM}
 }
 
 @book{einstein1956investigations,
