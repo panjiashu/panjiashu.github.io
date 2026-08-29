@@ -87,13 +87,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           Intuitively, \(D_Y(\gamma)\) distributes the total information about \(Y\) along the SNR axis: it measures how much additional feature information becomes accessible from an infinitesimal increase in SNR. A peak therefore identifies the noise level at which that feature is revealed most rapidly during denoising.
         </p>
         <p>
-          We use the I-MMSE identity to give this definition an equivalent denoising interpretation. Given optional side information \(S\), define
-        </p>
-        <div class="research-equation" aria-label="Minimum mean square error definition">
-          \[\operatorname{mmse}_{X\mid X_\gamma,S}(\gamma):=\min_{\hat{x}}\mathbb{E}\!\left[\left\|X-\hat{x}(X_\gamma,\gamma,S)\right\|_2^2\right].\]
-        </div>
-        <p>
-          This is the smallest denoising mean-square error achievable by any denoiser; it is attained by the posterior mean \(\hat{x}^{\star}(X_\gamma,\gamma,S)=\mathbb{E}[X\mid X_\gamma,S]\). Write the optimal unconditional and feature-conditional errors as \(m_\varnothing(\gamma):=\operatorname{mmse}_{X\mid X_\gamma}(\gamma)\) and \(m_Y(\gamma):=\operatorname{mmse}_{X\mid X_\gamma,Y}(\gamma)\). Using the I-MMSE identity, we express feature information density as the <strong>reduction in optimal loss brought by feature conditioning</strong>:
+          At any fixed SNR, a feature-conditional denoiser has access to \(Y\) in addition to \(X_\gamma\). Since it can always ignore this extra condition, its best achievable denoising loss \(m_Y(\gamma)\) cannot exceed the optimal unconditional loss \(m_\varnothing(\gamma)\). Using the I-MMSE identity, we show that feature information density is exactly half of this <strong>reduction in optimal denoising loss brought by feature conditioning</strong>:
         </p>
         <div class="research-equation" aria-label="Feature information density equation">
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
@@ -118,13 +112,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           直观上，\(D_Y(\gamma)\) 将关于 \(Y\) 的总信息量分布到信噪比轴上：它衡量信噪比增加无穷小量时，我们能从数据中多获得多少关于该特征的信息。因此，曲线的峰值对应这一特征在去噪过程中显现得最快的噪声水平。
         </p>
         <p>
-          我们利用 I-MMSE 等式，为这个定义给出去噪视角下的等价形式。给定可选的辅助信息 \(S\)，定义
-        </p>
-        <div class="research-equation" aria-label="最小均方误差定义">
-          \[\operatorname{mmse}_{X\mid X_\gamma,S}(\gamma):=\min_{\hat{x}}\mathbb{E}\!\left[\left\|X-\hat{x}(X_\gamma,\gamma,S)\right\|_2^2\right].\]
-        </div>
-        <p>
-          这是所有去噪器所能达到的最小均方误差，最优去噪器就是后验均值 \(\hat{x}^{\star}(X_\gamma,\gamma,S)=\mathbb{E}[X\mid X_\gamma,S]\)。将最优的无条件与特征条件去噪误差分别记作 \(m_\varnothing(\gamma):=\operatorname{mmse}_{X\mid X_\gamma}(\gamma)\) 和 \(m_Y(\gamma):=\operatorname{mmse}_{X\mid X_\gamma,Y}(\gamma)\)，利用 I-MMSE 等式可将特征信息密度用<strong>特征条件带来的最优损失下降</strong>写出：
+          在任意固定的信噪比上，特征条件去噪器除了 \(X_\gamma\) 之外还能使用 \(Y\)。由于它总可以选择忽略这一额外条件，其能够达到的最优去噪损失 \(m_Y(\gamma)\) 不会高于无条件去噪器的最优损失 \(m_\varnothing(\gamma)\)。我们利用 I-MMSE 关系证明，特征信息密度恰好等于这一<strong>特征条件带来的最优去噪损失下降</strong>的一半：
         </p>
         <div class="research-equation" aria-label="特征信息密度公式">
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
