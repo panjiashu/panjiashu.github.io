@@ -1,30 +1,230 @@
 ---
-layout: about
-title: about
+layout: home
+title: home
 permalink: /
-# subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
-
-profile:
-  align: right
-  image: panjiashu.jpg
-  image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>555 your office number</p>
-  #   <p>123 your address street</p>
-  #   <p>Your City, State 12345</p>
-
-news: false # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the interaction between data structure and model learning.
 ---
 
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<nav class="home-anchor-nav" aria-label="Homepage sections">
+  <a href="#about"><span data-lang="en">About Me</span><span data-lang="zh" hidden>关于我</span></a>
+  <a href="#research"><span data-lang="en">Research</span><span data-lang="zh" hidden>研究</span></a>
+  <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh" hidden>论文</span></a>
+  <a href="#hobbies"><span data-lang="en">Hobbies</span><span data-lang="zh" hidden>爱好</span></a>
+  <a href="#contact"><span data-lang="en">Contact</span><span data-lang="zh" hidden>联系</span></a>
+</nav>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+<section id="about" class="home-section">
+  <header class="home-section-header">
+    <span class="home-section-number">01</span>
+    <h2><span data-lang="en">About Me</span><span data-lang="zh" hidden>关于我</span></h2>
+  </header>
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
-Hi! I'm Jia-Shu Pan (潘嘉书), an incoming Ph.D. student at [Westlake University](https://en.westlake.edu.cn/), advised by Prof. [Tai-Lin Wu](https://tailin.org/). My research is centered on the intersection of AI and science.
-<!-- Here is my [CV](/assets/pdf/cv_jspan.pdf). -->
+  <div data-lang="en">
+    <p class="home-lead">
+      I am a Ph.D. student at Westlake University
+      (Fall 2025), advised by Prof. <a href="https://tailin.org/" target="_blank" rel="noopener noreferrer">Tailin Wu</a>.
+      I do research to reduce my perplexity about the world we live in.
+    </p>
+    <p>
+      I study the interplay between understanding—or representation learning—and generative models. I believe this interaction underlies many
+      important phenomena in language and vision: why does changing the order of training data alter a language model's convergence speed, and why
+      does the choice of representation space strongly affect the efficiency of visual generative modeling? I enjoy connecting these questions to
+      statistical physics and information theory, and using scientific methods to uncover the principles behind them.
+    </p>
+    <p>
+      Previously, I studied astronomy at Nanjing University
+      and the Australian National University,
+      working with Prof. <a href="https://www.mso.anu.edu.au/~yting/" target="_blank" rel="noopener noreferrer">Yuan-Sen Ting</a>.
+    </p>
+  </div>
 
-Previously, I obtained my bachelor degree in astronomy from Nanjing University supervised by Prof. [Ruo-Yu Liu](https://astronomy.nju.edu.cn/EN/People/AssociateProfessors/20210209/i188028.html) in 2023. I used to be a visiting student at Australian National University (Prof. [Yuan-Sen Ting](https://www.mso.anu.edu.au/~yting/)) and University of Chinese Academy of Science (Prof. [Yang Huang](https://people.ucas.ac.cn/~yanghuang)). 
+  <div data-lang="zh" hidden>
+    <p class="home-lead">
+      我于 2025 年秋季进入西湖大学攻读博士学位，导师是<a href="https://tailin.org/" target="_blank" rel="noopener noreferrer">吴泰霖老师</a>。
+      我做研究，是为了减少自己对我们所生活的世界的困惑。
+    </p>
+    <p>
+      我目前关注理解（或者说表示学习）与生成模型之间的相互作用。我相信这种相互作用支配了语言和视觉建模中众多有趣且重要的现象：为什么语言模型看到训练数据的顺序不同，会产生不同的收敛速度？为什么表示空间的选择会显著改变视觉生成模型的收敛效率？我享受这些问题与统计物理、信息论等领域的联系，并希望用科学方法理解现象背后的规律。
+    </p>
+    <p>
+      此前，我在南京大学和澳大利亚国立大学学习天文，并与<a href="https://www.mso.anu.edu.au/~yting/" target="_blank" rel="noopener noreferrer">Yuan-Sen Ting 教授</a>合作。
+    </p>
+  </div>
+</section>
+
+<section id="research" class="home-section">
+  <header class="home-section-header">
+    <span class="home-section-number">02</span>
+    <h2><span data-lang="en">Research Highlight</span><span data-lang="zh" hidden>研究工作</span></h2>
+  </header>
+
+  <details class="research-feature">
+    <summary class="research-feature-summary">
+      <span data-lang="en">
+        <span class="research-kicker">Submitted to NeurIPS 2026</span>
+        <strong>Feature Information Dynamics in Diffusion</strong>
+        <span class="research-expand-label">Click to expand details</span>
+      </span>
+      <span data-lang="zh" hidden>
+        <span class="research-kicker">投稿于 NeurIPS 2026</span>
+        <strong>扩散模型中的特征信息动力学</strong>
+        <span class="research-expand-label">点击展开详情</span>
+      </span>
+    </summary>
+
+    <div class="research-feature-content">
+      <div class="research-feature-copy" data-lang="en">
+        <p>
+          Diffusion models generate data through a continuum of denoising problems, and are widely observed to reveal coarse structure before fine detail. Yet, this intuition is mostly empirical and qualitative.
+        </p>
+        <h4>Feature information density</h4>
+        <p>
+          Let <em>X ∈ ℝ<sup>d</sup></em> be clean data, <em>Y</em> a feature of <em>X</em>, and <em>X<sub>γ</sub> = √γ X + N</em> the Gaussian-corrupted data at signal-to-noise ratio <em>γ</em>, where <em>N ∼ 𝒩(0, I)</em> is independent noise. We define the <strong>feature information density</strong> directly as
+        </p>
+        <div class="research-equation" aria-label="Feature information density definition">
+          D<sub>Y</sub>(γ) := dI(Y; X<sub>γ</sub>)/dγ.
+        </div>
+        <p>
+          We use the I-MMSE identity to give this definition an equivalent denoising interpretation. Given optional side information <em>S</em>, define
+        </p>
+        <div class="research-equation" aria-label="Minimum mean square error definition">
+          mmse<sub>X | Xγ, S</sub>(γ) = min<sub>x̂</sub> 𝔼 ‖X − x̂(X<sub>γ</sub>, γ, S)‖<sub>2</sub><sup>2</sup>.
+        </div>
+        <p>
+          This is the smallest denoising mean-square error achievable by any denoiser; it is attained by the posterior mean <em>x̂<sup>⋆</sup>(X<sub>γ</sub>, γ, S) = 𝔼[X | X<sub>γ</sub>, S]</em>. Writing the optimal unconditional and feature-conditional errors as <em>m<sub>∅</sub>(γ)</em> and <em>m<sub>Y</sub>(γ)</em>, respectively, the I-MMSE identity yields the equivalent form
+        </p>
+        <div class="research-equation" aria-label="Feature information density equation">
+          D<sub>Y</sub>(γ) = ½ [m<sub>∅</sub>(γ) − m<sub>Y</sub>(γ)].
+        </div>
+        <p>
+          Thus, feature information density is half the reduction in optimal denoising loss obtained by conditioning on <em>Y</em>; its trajectory across noise levels describes when that feature emerges during generation. Empirically, we quantitatively confirm spectral autoregression in pixel diffusion and find that class, mask, and edge information follow markedly different dynamics across pixel, SDVAE, VAVAE, and RAE spaces—revealing how representations reshape the order in which features are generated.
+        </p>
+      </div>
+
+      <div class="research-feature-copy" data-lang="zh" hidden>
+        <p>
+          扩散模型通过一系列连续的去噪问题生成数据，人们普遍观察到它会先呈现粗粒度结构，再补充细节。然而，这一直主要是一种经验性的定性直觉。
+        </p>
+        <h4>特征信息密度</h4>
+        <p>
+          设 <em>X ∈ ℝ<sup>d</sup></em> 是干净数据，<em>Y</em> 是 <em>X</em> 的某个特征，<em>X<sub>γ</sub> = √γ X + N</em> 是信噪比 <em>γ</em> 下经过高斯扰动的数据，其中 <em>N ∼ 𝒩(0, I)</em> 是独立噪声。我们将<strong>特征信息密度</strong>定义为
+        </p>
+        <div class="research-equation" aria-label="特征信息密度定义">
+          D<sub>Y</sub>(γ) := dI(Y; X<sub>γ</sub>)/dγ。
+        </div>
+        <p>
+          我们利用 I-MMSE 等式，为这个定义给出去噪视角下的等价形式。给定可选的辅助信息 <em>S</em>，定义
+        </p>
+        <div class="research-equation" aria-label="最小均方误差定义">
+          mmse<sub>X | Xγ, S</sub>(γ) = min<sub>x̂</sub> 𝔼 ‖X − x̂(X<sub>γ</sub>, γ, S)‖<sub>2</sub><sup>2</sup>。
+        </div>
+        <p>
+          这是所有去噪器所能达到的最小均方误差，最优去噪器就是后验均值 <em>x̂<sup>⋆</sup>(X<sub>γ</sub>, γ, S) = 𝔼[X | X<sub>γ</sub>, S]</em>。将最优的无条件与特征条件去噪误差分别记作 <em>m<sub>∅</sub>(γ)</em> 和 <em>m<sub>Y</sub>(γ)</em>，利用 I-MMSE 等式可得等价形式
+        </p>
+        <div class="research-equation" aria-label="特征信息密度公式">
+          D<sub>Y</sub>(γ) = ½ [m<sub>∅</sub>(γ) − m<sub>Y</sub>(γ)]。
+        </div>
+        <p>
+          因此，特征信息密度等于以 <em>Y</em> 为条件后最优去噪损失下降量的一半；它随噪声水平变化的轨迹刻画了该特征在生成过程中的出现时刻。经验上，我们定量验证了像素扩散中的频谱自回归现象，并观察到类别、掩码和边缘信息在像素、SDVAE、VAVAE 与 RAE 空间中呈现显著不同的动力学，从而揭示表示如何重塑特征的生成顺序。
+        </p>
+      </div>
+
+      <figure class="research-figure">
+        <a href="{{ '/assets/pdf/fid-demo-pixel-curves.pdf' | relative_url }}" target="_blank" title="Open the figure as PDF">
+          <img
+            src="{{ '/assets/img/publication_preview/fid-demo-pixel-curves.png' | relative_url }}"
+            alt="Feature information dynamics for class, mask, and Canny features in pixel space"
+            width="2401"
+            height="1350"
+            loading="lazy"
+          >
+        </a>
+        <figcaption data-lang="en">
+          Feature information dynamics in pixel space. Select the figure for the full-resolution PDF.
+        </figcaption>
+        <figcaption data-lang="zh" hidden>
+          像素空间中的特征信息动力学。点击图片可查看高清 PDF。
+        </figcaption>
+      </figure>
+    </div>
+  </details>
+</section>
+
+<section id="publications" class="home-section">
+  <header class="home-section-header">
+    <span class="home-section-number">03</span>
+    <h2><span data-lang="en">Selected Publications</span><span data-lang="zh" hidden>代表论文</span></h2>
+  </header>
+
+  <div class="publication-list">
+    <article class="publication-card">
+      <p class="publication-venue">NeurIPS 2026 · Under Review</p>
+        <h3>Feature Information Dynamics in Diffusion</h3>
+      <p class="publication-authors"><strong>Jia-Shu Pan</strong>, Tao Zhang, Yufei Huang, Yanjun Sheng, Tailin Wu</p>
+      <p class="publication-summary" data-lang="en">
+        A quantitative framework for locating hierarchical features along diffusion trajectories and relating their temporal organization to representation-dependent convergence.
+      </p>
+      <p class="publication-summary" data-lang="zh" hidden>
+        定量定位层次特征在扩散轨迹中的生成时刻，并研究这种时间组织方式与不同表示空间收敛速度之间的关系。
+      </p>
+      <div class="publication-links">
+        <a href="#research"><span data-lang="en">Overview</span><span data-lang="zh" hidden>简介</span></a>
+        <span><span data-lang="en">Manuscript coming soon</span><span data-lang="zh" hidden>论文即将公开</span></span>
+      </div>
+    </article>
+
+    <article class="publication-card">
+      <p class="publication-venue">ICLR 2026</p>
+      <h3>VFScale: Intrinsic Reasoning through Verifier-Free Test-time Scalable Diffusion Model</h3>
+      <p class="publication-authors">Tao Zhang*, <strong>Jia-Shu Pan*</strong>, Ruiqi Feng, Tailin Wu</p>
+      <p class="publication-note"><span data-lang="en">* Equal contribution</span><span data-lang="zh" hidden>* 共同第一作者</span></p>
+      <p class="publication-summary" data-lang="en">
+        VFScale trains a diffusion model's own energy to serve as a verifier and combines it with hybrid Monte Carlo Tree Search, enabling verifier-free test-time scaling on Maze and Sudoku.
+      </p>
+      <p class="publication-summary" data-lang="zh" hidden>
+        VFScale 将扩散模型自身的能量训练为验证器，并结合混合蒙特卡洛树搜索，在迷宫与数独任务上实现无需外部验证器的测试时扩展。
+      </p>
+      <div class="publication-links">
+        <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/6188c02ccc16a7587716de2efd754033-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">ICLR 2026</a>
+        <a href="https://arxiv.org/abs/2502.01989" target="_blank" rel="noopener noreferrer">arXiv</a>
+        <a href="https://github.com/AI4Science-WestlakeU/VFScale" target="_blank" rel="noopener noreferrer">Code</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="hobbies" class="home-section">
+  <header class="home-section-header">
+    <span class="home-section-number">04</span>
+    <h2><span data-lang="en">Hobbies</span><span data-lang="zh" hidden>爱好</span></h2>
+  </header>
+
+  <div class="hobby-list" aria-label="Hobbies">
+    <span>🏃 <span data-lang="en">Running</span><span data-lang="zh" hidden>跑步</span></span>
+    <span>🎞️ <span data-lang="en">Anime & ACG</span><span data-lang="zh" hidden>动漫与二次元</span></span>
+  </div>
+</section>
+
+<section id="contact" class="home-section">
+  <header class="home-section-header">
+    <span class="home-section-number">05</span>
+    <h2><span data-lang="en">Contact</span><span data-lang="zh" hidden>联系我</span></h2>
+  </header>
+
+  <div class="contact-card">
+    <div data-lang="en">
+      <p>Interesting questions, disagreements, and half-formed ideas are always welcome. If our research interests overlap, I would be happy to talk.</p>
+      <p>Email: <a href="mailto:panjiashu@westlake.edu.cn">panjiashu@westlake.edu.cn</a></p>
+    </div>
+    <div data-lang="zh" hidden>
+      <p>有趣的问题、不同的意见和尚未成形的想法都很受欢迎。如果我们的研究兴趣有所交集，欢迎随时交流。</p>
+      <p>邮箱：<a href="mailto:panjiashu@westlake.edu.cn">panjiashu@westlake.edu.cn</a></p>
+    </div>
+  </div>
+</section>
+
+<p class="home-colophon">
+  <span data-lang="en">© 2026 Jia-Shu Pan · Built with Jekyll and al-folio · Milky Way photographed by the author in the Tengger Desert on the night of August 12, 2026.</span>
+  <span data-lang="zh" hidden>© 2026 潘嘉书 · 使用 Jekyll 与 al-folio 构建 · 星空照片由本人于 2026 年 8 月 12 日晚摄于腾格里沙漠。</span>
+</p>

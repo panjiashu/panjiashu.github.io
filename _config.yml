@@ -6,9 +6,9 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Jia-Shu
 middle_name: 
 last_name: Pan
-email: jspan@smail.nju.edu.cn
+email: panjiashu@westlake.edu.cn
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Generative Models for Science
+  Jia-Shu Pan — machine learning, data structure, and generative models
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
@@ -96,7 +96,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  Feel free to reach out by email.
+  Interesting questions and ideas are always welcome.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -217,6 +217,7 @@ exclude:
   - package.json
   - package-lock.json
   - _pages/about_einstein.md
+  - _posts/2020-09-28-twitter.md
   - purgecss.config.js
   - README.md
   - readme_preview/

@@ -1,0 +1,23 @@
+# Local development overrides. Keep this list in sync with `exclude` in
+# _config.yml; YAML arrays are replaced rather than merged by Jekyll.
+exclude:
+  - bin/
+  - CONTRIBUTING.md
+  - CUSTOMIZE.md
+  - Dockerfile
+  - docker-compose.yml
+  - docker-compose-slim.yml
+  - FAQ.md
+  - Gemfile
+  - Gemfile.lock
+  - INSTALL.md
+  - LICENSE
+  - lighthouse_results/
+  - package.json
+  - package-lock.json
+  - _pages/about_einstein.md
+  - _posts/2020-09-28-twitter.md
+  - purgecss.config.js
+  - README.md
+  - readme_preview/
+  - vendor

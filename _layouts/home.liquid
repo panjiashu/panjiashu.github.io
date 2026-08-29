@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+  <head>
+    {% include head.liquid %}
+  </head>
+
+  <body class="homepage">
+    <a class="home-skip-link" href="#about">
+      <span data-lang="en">Skip to content</span>
+      <span data-lang="zh" hidden>跳到正文</span>
+    </a>
+
+    <main class="home-shell">
+      <aside class="home-identity" aria-label="Profile">
+        <img
+          class="home-portrait"
+          src="{{ '/assets/img/milky-way-card.png' | relative_url }}"
+          alt="Milky Way photographed by Jia-Shu Pan in the Tengger Desert on the night of August 12, 2026"
+          width="1448"
+          height="1086"
+        >
+
+        <div class="home-name-block">
+          <h1>Jia-Shu Pan <span lang="zh-CN">(潘嘉书)</span></h1>
+          <p>
+            <span data-lang="en">Ph.D. Student · Westlake University</span>
+            <span data-lang="zh" hidden>博士生 · 西湖大学</span>
+          </p>
+          <p class="home-location">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <span data-lang="en">Hangzhou, China</span>
+            <span data-lang="zh" hidden>中国 · 杭州</span>
+          </p>
+        </div>
+
+        <nav class="home-profile-links" aria-label="Profile links">
+          <a href="mailto:panjiashu@westlake.edu.cn"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a>
+          <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a
+          >
+          <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}" target="_blank" rel="noopener noreferrer"
+            ><i class="ai ai-google-scholar" aria-hidden="true"></i><span>Google Scholar</span></a
+          >
+          <a href="https://twitter.com/{{ site.x_username }}" target="_blank" rel="noopener noreferrer"
+            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span>X / Twitter</span></a
+          >
+          <a href="{{ '/assets/pdf/cv_jspan.pdf' | relative_url }}?v=20260830-022056" target="_blank"
+            ><i class="fa-solid fa-file-lines" aria-hidden="true"></i><span>CV</span></a
+          >
+        </nav>
+
+        <div class="home-controls">
+          <div class="language-toggle" aria-label="Language">
+            <button type="button" data-language-choice="en" aria-pressed="true">EN</button>
+            <span aria-hidden="true">/</span>
+            <button type="button" data-language-choice="zh" aria-pressed="false">中文</button>
+          </div>
+
+          {% if site.enable_darkmode %}
+            <button id="light-toggle" class="home-theme-toggle" type="button" title="Change theme" aria-label="Change color theme">
+              <i class="ti ti-sun-moon" id="light-toggle-system" aria-hidden="true"></i>
+              <i class="ti ti-moon-filled" id="light-toggle-dark" aria-hidden="true"></i>
+              <i class="ti ti-sun-filled" id="light-toggle-light" aria-hidden="true"></i>
+            </button>
+          {% endif %}
+        </div>
+      </aside>
+
+      <article class="home-content">
+        {{ content }}
+      </article>
+    </main>
+
+    <script src="{{ '/assets/js/home-language.js' | relative_url | bust_file_cache }}"></script>
+    {% include scripts/jquery.liquid %}
+    {% include scripts/bootstrap.liquid %}
+    {% include scripts/misc.liquid %}
+    {% include scripts/back_to_top.liquid %}
+  </body>
+</html>

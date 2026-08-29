@@ -12,7 +12,28 @@
     "ghcr.io/devcontainers-contrib/features/prettier:1": {}
   },
 
-  // Optionally: run jekyll serve automatically on container entering using the Docker entrypoint
+  // The image's global /usr/local/bundle directory is owned by root. Install
+  // project gems in the non-root vscode user's home directory instead.
+  "containerEnv": {
+    "BUNDLE_PATH": "/home/vscode/.bundle"
+  },
+
+  "forwardPorts": [8080, 35729],
+  "portsAttributes": {
+    "8080": {
+      "label": "Jekyll",
+      "onAutoForward": "openBrowser"
+    },
+    "35729": {
+      "label": "Jekyll LiveReload",
+      "onAutoForward": "silent"
+    }
+  },
+
+  // Install all gems declared by this repository before starting Jekyll.
+  "postCreateCommand": "bundle install",
+
+  // Run Jekyll automatically when attaching to the container.
   "postAttachCommand": "./bin/entry_point.sh",
 
   "customizations": {
