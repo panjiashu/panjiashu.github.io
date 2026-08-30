@@ -194,6 +194,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
   </header>
 
   <div class="hobby-list" aria-label="Hobbies">
+    <span>🏃 <span data-lang="en">Running</span><span data-lang="zh" hidden>跑步</span></span>
     <span>🎞️ <span data-lang="en">Anime</span><span data-lang="zh" hidden>二次元</span></span>
   </div>
 </section>
