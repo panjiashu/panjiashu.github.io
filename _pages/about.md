@@ -194,8 +194,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
   </header>
 
   <div class="hobby-list" aria-label="Hobbies">
-    <span>🏃 <span data-lang="en">Running</span><span data-lang="zh" hidden>跑步</span></span>
-    <span>🎞️ <span data-lang="en">Anime & ACG</span><span data-lang="zh" hidden>动漫与二次元</span></span>
+    <span>🎞️ <span data-lang="en">Anime</span><span data-lang="zh" hidden>二次元</span></span>
   </div>
 </section>
 
@@ -218,6 +217,6 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
 </section>
 
 <p class="home-colophon">
-  <span data-lang="en">© 2026 Jia-Shu Pan · Built with Jekyll and al-folio · Milky Way photographed by the author in the Tengger Desert on the night of August 12, 2026.</span>
-  <span data-lang="zh" hidden>© 2026 潘嘉书 · 使用 Jekyll 与 al-folio 构建 · 星空照片由本人于 2026 年 8 月 12 日晚摄于腾格里沙漠。</span>
+  <span data-lang="en">© 2026 Jia-Shu Pan · Built with Jekyll and al-folio · Website design inspired by <a href="https://huanranchen.github.io/" target="_blank" rel="noopener noreferrer">Huanran Chen</a> · Milky Way photographed by the author in the Tengger Desert on the night of August 12, 2026.</span>
+  <span data-lang="zh" hidden>© 2026 潘嘉书 · 使用 Jekyll 与 al-folio 构建 · 网站设计参考了<a href="https://huanranchen.github.io/" target="_blank" rel="noopener noreferrer">陈焕然</a>的个人主页 · 星空照片由本人于 2026 年 8 月 12 日晚摄于腾格里沙漠。</span>
 </p>
