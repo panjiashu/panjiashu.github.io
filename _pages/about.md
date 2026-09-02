@@ -78,7 +78,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
         </p>
         <h4>Feature information density</h4>
         <p>
-          Let \(X\in\mathbb{R}^d\) be clean data, \(Y\) a feature of \(X\), and \(X_\gamma=\sqrt{\gamma}X+N\) the Gaussian-corrupted data at signal-to-noise ratio \(\gamma\), where \(N\sim\mathcal{N}(0,I)\) is independent noise. We define the <strong>feature information density</strong> as
+          Let \(X\in\mathbb{R}^d\) be clean data (e.g., an image or latent), \(Y\) a feature of \(X\) (e.g., class, mask, or Canny), and \(X_\gamma=\sqrt{\gamma}X+N\) the Gaussian-corrupted data at signal-to-noise ratio \(\gamma\), where \(N\sim\mathcal{N}(0,I)\) is independent noise. We define the <strong>feature information density</strong> as
         </p>
         <div class="research-equation" aria-label="Feature information density definition">
           \[D_Y(\gamma):=\frac{\mathrm d}{\mathrm d\gamma}I(Y;X_\gamma).\]
@@ -103,7 +103,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
         </p>
         <h4>特征信息密度</h4>
         <p>
-          设 \(X\in\mathbb{R}^d\) 是干净数据，\(Y\) 是 \(X\) 的某个特征，\(X_\gamma=\sqrt{\gamma}X+N\) 是信噪比 \(\gamma\) 下经过高斯扰动的数据，其中 \(N\sim\mathcal{N}(0,I)\) 是独立噪声。我们将<strong>特征信息密度</strong>定义为
+          设 \(X\in\mathbb{R}^d\) 是干净数据（例如图像或 latent），\(Y\) 是 \(X\) 的某个特征（例如类别、mask 或 Canny），\(X_\gamma=\sqrt{\gamma}X+N\) 是信噪比 \(\gamma\) 下经过高斯扰动的数据，其中 \(N\sim\mathcal{N}(0,I)\) 是独立噪声。我们将<strong>特征信息密度</strong>定义为
         </p>
         <div class="research-equation" aria-label="特征信息密度定义">
           \[D_Y(\gamma):=\frac{\mathrm d}{\mathrm d\gamma}I(Y;X_\gamma).\]
