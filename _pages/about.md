@@ -74,7 +74,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
     <div class="research-feature-content">
       <div class="research-feature-copy" data-lang="en">
         <p>
-          Diffusion models generate data through a continuum of denoising problems, and are widely observed to reveal coarse structure before fine detail. Yet, this intuition is mostly empirical and qualitative.
+          Diffusion models generate data through a continuum of denoising problems, and are widely observed to reveal coarse structure before fine detail. Yet, this intuition is mostly empirical and qualitative—and, crucially, <strong>it need not hold after data are mapped into a representation space</strong>.
         </p>
         <h4>Feature information density</h4>
         <p>
@@ -93,13 +93,13 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
         </div>
         <p>
-          Its trajectory across noise levels describes how that feature's information is distributed over the generation process. Empirically, we quantitatively confirm spectral autoregression in pixel diffusion and find that class, mask, and edge information follow markedly different dynamics across pixel, SDVAE, VAVAE, and RAE spaces—revealing how representations reshape the order in which features are generated.
+          Its trajectory across noise levels describes how that feature's information is distributed over the generation process. Empirically, we find that <strong>class, mask, and Canny information exhibit markedly different dynamics across pixel, SDVAE, VAVAE, and RAE spaces</strong>. Among them, only RAE follows the class → mask → Canny order. We hypothesize that this ordered feature dynamics may explain why diffusion models converge fastest in the RAE space.
         </p>
       </div>
 
       <div class="research-feature-copy" data-lang="zh" hidden>
         <p>
-          扩散模型通过一系列连续的去噪问题生成数据，人们普遍观察到它会先呈现粗粒度结构，再补充细节。然而，这一直主要是一种经验性的定性直觉。
+          扩散模型通过一系列连续的去噪问题生成数据，人们普遍观察到它会先呈现粗粒度结构，再补充细节。然而，这一直主要是一种经验性的定性直觉；更关键的是，<strong>当数据被映射到表示空间后，这一 coarse-to-fine 直觉未必仍然成立</strong>。
         </p>
         <h4>特征信息密度</h4>
         <p>
@@ -118,7 +118,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
         </div>
         <p>
-          它随噪声水平变化的轨迹刻画了该特征信息在生成过程中的分布。经验上，我们定量验证了像素扩散中的频谱自回归现象，并观察到类别、mask和边缘信息在像素、SDVAE、VAVAE 与 RAE 空间中呈现显著不同的动力学，从而揭示表示如何重塑特征的生成顺序。
+          它随噪声水平变化的轨迹刻画了该特征信息在生成过程中的分布。经验上，我们发现<strong>类别、mask 和 Canny 信息在像素、SDVAE、VAVAE 与 RAE 空间中呈现显著不同的动力学</strong>。其中，只有 RAE 上的特征信息动力学服从类别 → mask → Canny 的顺序。我们猜测，这种有序的特征动力学可能正是扩散模型在 RAE 空间中收敛最快的原因。
         </p>
       </div>
 
