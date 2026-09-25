@@ -26,11 +26,15 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       I am deeply interested in the <strong>physics of intelligence</strong>. I do research to reduce my perplexity about the world we live in.
     </p>
     <p>
-      I mainly study the <strong>interplay between understanding—or representation learning—and generative models</strong>. I believe this interaction underlies many
-      important phenomena in language and vision: why does changing the order of training data alter a language model's convergence speed, and why
-      does the choice of representation space strongly affect the efficiency of visual generative modeling? I enjoy connecting these questions to
-      statistical physics and information theory, and using <strong>scientific methods</strong> to uncover the principles behind them.
+      I study the <strong>interplay between representation learning and generative modeling</strong>, drawing on statistical physics and information theory. Some questions that guide my research are:
     </p>
+    <ul class="research-questions">
+      <li><strong>How does the encoding distribution \(q(z_0\mid x)\) shape the learnability of generative models?</strong> <a href="https://arxiv.org/abs/2510.11690" target="_blank" rel="noopener noreferrer">RAE</a> · <a href="https://arxiv.org/abs/2504.10483" target="_blank" rel="noopener noreferrer">REPA-E</a></li>
+      <li><strong>How does the forward process \(p_F(z_{0:T})\) shape the difficulty of learning to generate?</strong> <a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">Discussion on Zhihu (Chinese)</a></li>
+      <li><strong>How can representation-aware objectives enable few-step or one-step generation?</strong> <a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
+    </ul>
+    <p>In practice, my current focus is <strong>end-to-end, single-step latent diffusion models</strong>.</p>
+    <p class="home-opportunity">I am actively seeking <strong>internships with leading academic and industry research groups</strong>. Please <a href="#contact">get in touch</a> if our interests overlap.</p>
     <p>
       Previously, I studied astronomy at Nanjing University
       and the Australian National University,
@@ -43,8 +47,15 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       我于 2025 年秋季进入西湖大学攻读博士学位，导师是<a href="https://tailin.org/" target="_blank" rel="noopener noreferrer">吴泰霖老师</a>。我对<strong>智能的物理学</strong>有浓厚兴趣。我做研究，是为了减少自己对我们所生活的世界的困惑。
     </p>
     <p>
-      我目前主要关注<strong>理解（或者说表示学习）与生成模型之间的相互作用</strong>。我相信这种相互作用支配了语言和视觉建模中众多有趣且重要的现象：为什么语言模型看到训练数据的顺序不同，会产生不同的收敛速度？为什么表示空间的选择会显著改变视觉生成模型的收敛效率？我享受这些问题与统计物理、信息论等领域的联系，并希望用<strong>科学方法</strong>理解现象背后的规律。
+      我主要关注<strong>表示学习与生成模型之间的相互作用</strong>，并借助统计物理和信息论研究其中的规律。具体而言，我关心：
     </p>
+    <ul class="research-questions">
+      <li><strong>编码分布 \(q(z_0\mid x)\) 如何影响生成模型的可学习性？</strong><a href="https://arxiv.org/abs/2510.11690" target="_blank" rel="noopener noreferrer">RAE</a> · <a href="https://arxiv.org/abs/2504.10483" target="_blank" rel="noopener noreferrer">REPA-E</a></li>
+      <li><strong>前向过程 \(p_F(z_{0:T})\) 如何影响生成任务的学习难度？</strong><a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">知乎讨论</a></li>
+      <li><strong>如何利用表示空间中的训练目标，实现少步或单步生成？</strong><a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
+    </ul>
+    <p>在实践上，我目前的主要关注是<strong>端到端、单步隐空间扩散模型</strong>。</p>
+    <p class="home-opportunity">我正在积极寻找<strong>顶尖学术团队与工业界研究机构的实习机会</strong>。如果研究兴趣契合，欢迎<a href="#contact">联系我</a>。</p>
     <p>
       此前，我在南京大学和澳大利亚国立大学学习天文，并与<a href="https://www.mso.anu.edu.au/~yting/" target="_blank" rel="noopener noreferrer">Yuan-Sen Ting 教授</a>合作。
     </p>
@@ -57,17 +68,34 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
     <h2><span data-lang="en">Research Highlight</span><span data-lang="zh" hidden>研究工作</span></h2>
   </header>
 
-  <details class="research-feature">
+  <div class="research-feature">
+    <div class="research-feature-overview">
+      <div data-lang="en">
+        <span class="research-kicker">NeurIPS 2026</span>
+        <h3>Feature Information Dynamics in Diffusion</h3>
+        <p>Using the <strong>I-MMSE relation</strong>, we define <strong>feature information density</strong> during diffusion for <strong>any feature</strong> in <strong>any representation space</strong>, quantifying <strong>the order in which different features emerge</strong>.</p>
+      </div>
+      <div data-lang="zh" hidden>
+        <span class="research-kicker">NeurIPS 2026</span>
+        <h3>扩散模型中的特征信息动力学</h3>
+        <p>利用 <strong>I-MMSE 关系</strong>，我们定义了<strong>任意表示空间</strong>上、<strong>任意特征</strong>在扩散中的<strong>特征信息密度</strong>，以量化<strong>不同特征在扩散过程中的出现顺序</strong>。</p>
+      </div>
+    </div>
+    <figure class="research-figure">
+      <a href="{{ '/assets/pdf/fid-demo-pixel-curves.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/assets/img/publication_preview/fid-demo-pixel-curves.png' | relative_url }}" alt="Feature information dynamics for class, mask, and Canny in pixel space" width="2401" height="1350" loading="lazy">
+      </a>
+      <figcaption><span data-lang="en">Feature information dynamics in pixel space.</span><span data-lang="zh" hidden>像素空间中的特征信息动力学。</span></figcaption>
+    </figure>
+  <details class="research-feature-details">
     <summary class="research-feature-summary">
       <span data-lang="en">
-        <span class="research-kicker">Submitted to NeurIPS 2026</span>
-        <strong>Feature Information Dynamics in Diffusion</strong>
-        <span class="research-expand-label">Click to expand details</span>
+        <span class="research-expand-label">Explore the definition and compare four representation spaces</span>
+        <span class="research-collapse-label">Collapse details</span>
       </span>
       <span data-lang="zh" hidden>
-        <span class="research-kicker">投稿于 NeurIPS 2026</span>
-        <strong>扩散模型中的特征信息动力学</strong>
-        <span class="research-expand-label">点击展开详情</span>
+        <span class="research-expand-label">展开查看定义与四种表示空间的对比</span>
+        <span class="research-collapse-label">收起详情</span>
       </span>
     </summary>
 
@@ -123,24 +151,26 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       </div>
 
       <figure class="research-figure">
-        <a href="{{ '/assets/pdf/fid-demo-pixel-curves.pdf' | relative_url }}" target="_blank" title="Open the figure as PDF">
+        <a href="{{ '/assets/img/publication_preview/fid-four-representations.png' | relative_url }}" target="_blank" title="Open the full-resolution figure" rel="noopener noreferrer">
           <img
-            src="{{ '/assets/img/publication_preview/fid-demo-pixel-curves.png' | relative_url }}"
-            alt="Feature information dynamics for class, mask, and Canny features in pixel space"
-            width="2401"
-            height="1350"
+            src="{{ '/assets/img/publication_preview/fid-four-representations.png' | relative_url }}"
+            alt="Feature information densities across pixel, SDVAE, VAVAE, and RAE spaces"
             loading="lazy"
           >
         </a>
         <figcaption data-lang="en">
-          Feature information dynamics in pixel space. Select the figure for the full-resolution PDF.
+          Feature information dynamics across pixel, SDVAE, VAVAE, and RAE spaces. Curves show normalized information densities for successive class, mask, and Canny conditions along log-SNR. Only RAE exhibits the class → mask → Canny order.
         </figcaption>
         <figcaption data-lang="zh" hidden>
-          像素空间中的特征信息动力学。点击图片可查看高清 PDF。
+          像素、SDVAE、VAVAE 与 RAE 空间中的特征信息动力学。曲线展示依次加入类别、mask、Canny 条件时，沿 log-SNR 分布的归一化信息密度。只有 RAE 呈现类别 → mask → Canny 的顺序。
         </figcaption>
       </figure>
+      <button class="research-collapse-button" type="button" data-collapse-research>
+        <span data-lang="en">Collapse details ↑</span><span data-lang="zh" hidden>收起详情 ↑</span>
+      </button>
     </div>
   </details>
+  </div>
 </section>
 
 <section id="publications" class="home-section">
@@ -151,7 +181,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
 
   <div class="publication-list">
     <article class="publication-card">
-      <p class="publication-venue">NeurIPS 2026 · Under Review</p>
+      <p class="publication-venue">NeurIPS 2026</p>
         <h3>Feature Information Dynamics in Diffusion</h3>
       <p class="publication-authors"><strong>Jia-Shu Pan</strong>, Tao Zhang, Yufei Huang, Yanjun Sheng, Tailin Wu</p>
       <p class="publication-summary" data-lang="en">

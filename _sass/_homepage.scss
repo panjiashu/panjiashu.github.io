@@ -272,6 +272,7 @@
 
 .research-feature-summary {
   position: relative;
+  scroll-margin-top: 20px;
   padding: clamp(20px, 4vw, 28px) clamp(48px, 7vw, 64px) clamp(20px, 4vw, 28px) clamp(22px, 4vw, 34px);
   cursor: pointer;
   list-style: none;
@@ -291,7 +292,7 @@
   transform: translateY(-50%);
 }
 
-.research-feature[open] .research-feature-summary::after {
+.research-feature details[open] .research-feature-summary::after {
   content: "−";
 }
 
@@ -307,11 +308,44 @@
 
 .research-expand-label {
   color: var(--home-ink-soft);
-  font-size: 0.82rem;
+  font-size: inherit;
+}
+
+.research-collapse-label {
+  display: none;
+  color: var(--home-ink-soft);
+  font-size: inherit;
+}
+
+.research-feature-details[open] .research-expand-label {
+  display: none;
+}
+
+.research-feature-details[open] .research-collapse-label {
+  display: inline;
 }
 
 .research-feature-content {
   border-top: 1px solid var(--global-divider-color);
+}
+
+.research-questions {
+  padding-left: 1.3em;
+  li { margin-bottom: 14px; padding-left: 4px; }
+  li::marker { color: var(--home-accent); }
+  strong { display: block; margin-bottom: 4px; }
+}
+
+.home-opportunity {
+  padding: 12px 16px;
+  border-left: 3px solid var(--home-accent);
+  background: var(--home-accent-soft);
+}
+
+.research-feature-overview {
+  padding: clamp(22px, 4vw, 34px);
+  h3 { margin: 8px 0 14px; font-size: clamp(1.18rem, 2.5vw, 1.5rem); }
+  p { margin-bottom: 0; }
 }
 
 .research-feature-copy {
@@ -321,7 +355,7 @@
 .research-feature-copy h4 {
   margin: 24px 0 10px;
   color: var(--home-accent);
-  font-size: 0.82rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -338,6 +372,10 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.research-kicker {
+  font-size: 1rem;
 }
 
 .research-figure {
@@ -359,7 +397,7 @@
   max-width: 760px;
   margin: 11px auto 0;
   color: #61656c;
-  font-size: 0.79rem;
+  font-size: 1rem;
   line-height: 1.55;
   text-align: center;
 }
@@ -373,9 +411,27 @@
   background: var(--home-accent-soft);
   color: var(--home-ink);
   font-family: "Roboto Slab", Georgia, serif;
-  font-size: clamp(0.78rem, 1.7vw, 0.98rem);
+  font-size: 1rem;
   text-align: center;
   white-space: nowrap;
+}
+
+.research-collapse-button {
+  display: block;
+  margin: 0 clamp(22px, 4vw, 34px) clamp(22px, 4vw, 34px) auto;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: var(--home-accent);
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.research-collapse-button:hover,
+.research-collapse-button:focus-visible {
+  text-decoration-thickness: 2px;
 }
 
 .publication-list {

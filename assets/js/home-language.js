@@ -54,6 +54,23 @@
     return selected;
   }
 
+  function initResearchCollapse(document) {
+    document.querySelectorAll("[data-collapse-research]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const details = button.closest("details");
+        const summary = details && details.querySelector("summary");
+        if (!details || !summary) return;
+
+        details.open = false;
+        summary.focus({ preventScroll: true });
+        summary.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  }
+
   const api = {
     STORAGE_KEY,
     applyLanguage,
@@ -67,7 +84,10 @@
   global.HomeLanguage = api;
 
   if (typeof document !== "undefined") {
-    const start = () => initLanguage(document, global.localStorage);
+    const start = () => {
+      initLanguage(document, global.localStorage);
+      initResearchCollapse(document);
+    };
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", start, { once: true });
     } else {
