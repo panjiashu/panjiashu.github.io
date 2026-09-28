@@ -2,6 +2,7 @@
 layout: home
 title: home
 permalink: /
+last_updated: 2026-09-28
 description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the interaction between data structure and model learning.
 ---
 
@@ -33,7 +34,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       <li><strong>How does the forward process \(p_F(z_{0:T})\) shape the difficulty of learning to generate?</strong> <a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">Discussion on Zhihu (Chinese)</a></li>
       <li><strong>How can representation-aware objectives enable few-step or one-step generation?</strong> <a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
     </ul>
-    <p>These questions guide my current focus on <strong>end-to-end, few-step latent diffusion models</strong>: jointly learning representations and generators to achieve both <strong>efficient learning and few-step generation</strong>.</p>
+    <p>These questions guide my current focus on <strong>end-to-end (single-step) latent generative models</strong>: jointly learning representations and generators to achieve both <strong>efficient learning and few-step generation</strong>.</p>
     <p class="home-opportunity">I am actively seeking <strong>internships with leading academic and industry research groups</strong>. Please <a href="#contact">get in touch</a> if our interests overlap.</p>
     <p>
       Previously, I studied astronomy at Nanjing University
@@ -54,7 +55,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       <li><strong>前向过程 \(p_F(z_{0:T})\) 如何影响生成任务的学习难度？</strong><a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">知乎讨论</a></li>
       <li><strong>如何利用表示空间中的训练目标，实现少步或单步生成？</strong><a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
     </ul>
-    <p>这些问题共同指向我目前的研究重点：<strong>端到端少步隐空间扩散模型</strong>。通过联合学习表示与生成器，使模型兼具<strong>高效学习与少步生成能力</strong>。</p>
+    <p>这些问题共同指向我目前的研究重点：<strong>端到端（单步）隐空间生成模型</strong>。通过联合学习表示与生成器，使模型兼具<strong>高效学习与少步生成能力</strong>。</p>
     <p class="home-opportunity">我正在积极寻找<strong>顶尖学术团队与工业界研究机构的实习机会</strong>。如果研究兴趣契合，欢迎<a href="#contact">联系我</a>。</p>
     <p>
       此前，我在南京大学和澳大利亚国立大学学习天文，并与<a href="https://www.mso.anu.edu.au/~yting/" target="_blank" rel="noopener noreferrer">Yuan-Sen Ting 教授</a>合作。
@@ -121,7 +122,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
         </div>
         <p>
-          Its trajectory across noise levels describes how that feature's information is distributed over the generation process. Empirically, we find that <strong>class, mask, and Canny information exhibit markedly different dynamics across pixel, SDVAE, VAVAE, and RAE spaces</strong>. Among them, only RAE follows the class → mask → Canny order. We hypothesize that this ordered feature dynamics may explain why diffusion models converge fastest in the RAE space.
+          Its trajectory across noise levels describes how that feature's information is distributed over the generation process. Empirically, we find that <strong>class, mask, and Canny information exhibit markedly different dynamics across pixel, SDVAE, VAVAE, and RAE spaces</strong>. <strong>Only RAE exhibits the class → mask → Canny order.</strong> We hypothesize that <strong>these ordered feature dynamics may explain why diffusion models converge fastest in the RAE space</strong>.
         </p>
       </div>
 
@@ -146,7 +147,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
         </div>
         <p>
-          它随噪声水平变化的轨迹刻画了该特征信息在生成过程中的分布。经验上，我们发现<strong>类别、mask 和 Canny 信息在像素、SDVAE、VAVAE 与 RAE 空间中呈现显著不同的动力学</strong>。其中，只有 RAE 上的特征信息动力学服从类别 → mask → Canny 的顺序。我们猜测，这种有序的特征动力学可能正是扩散模型在 RAE 空间中收敛最快的原因。
+          它随噪声水平变化的轨迹刻画了该特征信息在生成过程中的分布。经验上，我们发现<strong>类别、mask 和 Canny 信息在像素、SDVAE、VAVAE 与 RAE 空间中呈现显著不同的动力学</strong>。其中，<strong>只有 RAE 上的特征信息动力学服从类别 → mask → Canny 的顺序</strong>。我们猜测，<strong>这种有序的特征动力学可能正是扩散模型在 RAE 空间中收敛最快的原因</strong>。
         </p>
       </div>
 
@@ -159,10 +160,10 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           >
         </a>
         <figcaption data-lang="en">
-          Feature information dynamics across pixel, SDVAE, VAVAE, and RAE spaces. Curves show normalized information densities for successive class, mask, and Canny conditions along log-SNR. Only RAE exhibits the class → mask → Canny order.
+          Feature information dynamics across pixel, SDVAE, VAVAE, and RAE spaces. Curves show normalized information densities for successive class, mask, and Canny conditions along log-SNR. <strong>Only RAE exhibits the class → mask → Canny order.</strong>
         </figcaption>
         <figcaption data-lang="zh" hidden>
-          像素、SDVAE、VAVAE 与 RAE 空间中的特征信息动力学。曲线展示依次加入类别、mask、Canny 条件时，沿 log-SNR 分布的归一化信息密度。只有 RAE 呈现类别 → mask → Canny 的顺序。
+          像素、SDVAE、VAVAE 与 RAE 空间中的特征信息动力学。曲线展示依次加入类别、mask、Canny 条件时，沿 log-SNR 分布的归一化信息密度。<strong>只有 RAE 呈现类别 → mask → Canny 的顺序。</strong>
         </figcaption>
       </figure>
       <button class="research-collapse-button" type="button" data-collapse-research>
@@ -248,6 +249,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
 </section>
 
 <p class="home-colophon">
+  <span class="home-last-updated"><span data-lang="en">Last updated: </span><span data-lang="zh" hidden>最后编辑：</span><time datetime="{{ page.last_updated | date: '%Y-%m-%d' }}">{{ page.last_updated | date: '%Y-%m-%d' }}</time></span>
   <span data-lang="en">© 2026 Jia-Shu Pan · Built with Jekyll and al-folio · Website design inspired by <a href="https://huanranchen.github.io/" target="_blank" rel="noopener noreferrer">Huanran Chen</a> · Milky Way photographed by the author in the Tengger Desert on the night of August 12, 2026.</span>
   <span data-lang="zh" hidden>© 2026 潘嘉书 · 使用 Jekyll 与 al-folio 构建 · 网站设计参考了<a href="https://huanranchen.github.io/" target="_blank" rel="noopener noreferrer">陈焕然</a>的个人主页 · 星空照片由本人于 2026 年 8 月 12 日晚摄于腾格里沙漠。</span>
 </p>
