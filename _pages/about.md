@@ -33,7 +33,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       <li><strong>How does the forward process \(p_F(z_{0:T})\) shape the difficulty of learning to generate?</strong> <a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">Discussion on Zhihu (Chinese)</a></li>
       <li><strong>How can representation-aware objectives enable few-step or one-step generation?</strong> <a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
     </ul>
-    <p>In practice, my current focus is <strong>end-to-end, single-step latent diffusion models</strong>.</p>
+    <p>These questions guide my current focus on <strong>end-to-end, few-step latent diffusion models</strong>: jointly learning representations and generators to achieve both <strong>efficient learning and few-step generation</strong>.</p>
     <p class="home-opportunity">I am actively seeking <strong>internships with leading academic and industry research groups</strong>. Please <a href="#contact">get in touch</a> if our interests overlap.</p>
     <p>
       Previously, I studied astronomy at Nanjing University
@@ -54,7 +54,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       <li><strong>前向过程 \(p_F(z_{0:T})\) 如何影响生成任务的学习难度？</strong><a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">知乎讨论</a></li>
       <li><strong>如何利用表示空间中的训练目标，实现少步或单步生成？</strong><a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
     </ul>
-    <p>在实践上，我目前的主要关注是<strong>端到端、单步隐空间扩散模型</strong>。</p>
+    <p>这些问题共同指向我目前的研究重点：<strong>端到端少步隐空间扩散模型</strong>。通过联合学习表示与生成器，使模型兼具<strong>高效学习与少步生成能力</strong>。</p>
     <p class="home-opportunity">我正在积极寻找<strong>顶尖学术团队与工业界研究机构的实习机会</strong>。如果研究兴趣契合，欢迎<a href="#contact">联系我</a>。</p>
     <p>
       此前，我在南京大学和澳大利亚国立大学学习天文，并与<a href="https://www.mso.anu.edu.au/~yting/" target="_blank" rel="noopener noreferrer">Yuan-Sen Ting 教授</a>合作。
