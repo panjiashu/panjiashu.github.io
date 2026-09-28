@@ -75,11 +75,13 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
         <span class="research-kicker">NeurIPS 2026</span>
         <h3>Feature Information Dynamics in Diffusion</h3>
         <p>Using the <strong>I-MMSE relation</strong>, we define <strong>feature information density</strong> during diffusion for <strong>any feature</strong> in <strong>any representation space</strong>, quantifying <strong>the order in which different features emerge</strong>.</p>
+        <p>Across the four representation spaces we study, <strong>only RAE exhibits the class → mask → Canny order</strong>, and diffusion models converge fastest in this space. We hypothesize that <strong>these ordered feature dynamics help explain its faster convergence</strong>.</p>
       </div>
       <div data-lang="zh" hidden>
         <span class="research-kicker">NeurIPS 2026</span>
         <h3>扩散模型中的特征信息动力学</h3>
         <p>利用 <strong>I-MMSE 关系</strong>，我们定义了<strong>任意表示空间</strong>上、<strong>任意特征</strong>在扩散中的<strong>特征信息密度</strong>，以量化<strong>不同特征在扩散过程中的出现顺序</strong>。</p>
+        <p>在我们研究的四种表示空间中，<strong>只有 RAE 呈现类别 → mask → Canny 的顺序</strong>，且其上的扩散模型收敛最快。我们猜测，<strong>这种有序的特征动力学可能解释其更快的训练收敛</strong>。</p>
       </div>
     </div>
     <figure class="research-figure">
