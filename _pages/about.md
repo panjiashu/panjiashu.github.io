@@ -194,7 +194,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
         定量定位层次特征在扩散轨迹中的生成时刻，并研究这种时间组织方式与不同表示空间收敛速度之间的关系。
       </p>
       <div class="publication-links">
-        <a href="#research"><span data-lang="en">Overview</span><span data-lang="zh" hidden>简介</span></a>
+        <a href="{{ "/feature-information-dynamics/" | relative_url }}"><span data-lang="en">Project page</span><span data-lang="zh" hidden>项目主页</span></a>
         <span><span data-lang="en">Manuscript coming soon</span><span data-lang="zh" hidden>论文即将公开</span></span>
       </div>
     </article>
