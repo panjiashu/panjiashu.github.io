@@ -2,7 +2,7 @@
 layout: home
 title: home
 permalink: /
-last_updated: 2026-09-28
+last_updated: 2026-10-06
 description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the interaction between data structure and model learning.
 ---
 
@@ -31,7 +31,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
     </p>
     <ul class="research-questions">
       <li><strong>How does the encoding distribution \(q(z_0\mid x)\) shape the learnability of generative models?</strong> <a href="https://arxiv.org/abs/2510.11690" target="_blank" rel="noopener noreferrer">RAE</a> · <a href="https://arxiv.org/abs/2504.10483" target="_blank" rel="noopener noreferrer">REPA-E</a></li>
-      <li><strong>How does the forward process \(p_F(z_{0:T})\) shape the difficulty of learning to generate?</strong> <a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">Discussion on Zhihu (Chinese)</a></li>
+      <li><strong>How does the forward process \(p_F(z_{0:T})\) shape the learnability of generative models?</strong> <a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">Discussion on Zhihu (Chinese)</a></li>
       <li><strong>How can representation-aware objectives enable few-step or one-step generation?</strong> <a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
     </ul>
     <p>These questions guide my current focus on <strong>end-to-end (single-step) latent generative models</strong>: jointly learning representations and generators to achieve both <strong>efficient learning and few-step generation</strong>.</p>
@@ -52,7 +52,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
     </p>
     <ul class="research-questions">
       <li><strong>编码分布 \(q(z_0\mid x)\) 如何影响生成模型的可学习性？</strong><a href="https://arxiv.org/abs/2510.11690" target="_blank" rel="noopener noreferrer">RAE</a> · <a href="https://arxiv.org/abs/2504.10483" target="_blank" rel="noopener noreferrer">REPA-E</a></li>
-      <li><strong>前向过程 \(p_F(z_{0:T})\) 如何影响生成任务的学习难度？</strong><a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">知乎讨论</a></li>
+      <li><strong>前向过程 \(p_F(z_{0:T})\) 如何影响生成模型的可学习性？</strong><a href="https://arxiv.org/abs/2506.19935" target="_blank" rel="noopener noreferrer">AO-GPT</a> · <a href="https://zhuanlan.zhihu.com/p/1989306829931557631" target="_blank" rel="noopener noreferrer">知乎讨论</a></li>
       <li><strong>如何利用表示空间中的训练目标，实现少步或单步生成？</strong><a href="https://arxiv.org/abs/2607.03524" target="_blank" rel="noopener noreferrer">Perceptual Flow Matching</a> · <a href="https://arxiv.org/abs/2602.04770" target="_blank" rel="noopener noreferrer">Drifting Models</a></li>
     </ul>
     <p>这些问题共同指向我目前的研究重点：<strong>端到端（单步）隐空间生成模型</strong>。通过联合学习表示与生成器，使模型兼具<strong>高效学习与少步生成能力</strong>。</p>
