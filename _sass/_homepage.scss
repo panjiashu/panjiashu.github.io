@@ -489,8 +489,8 @@
   margin-top: 15px;
 }
 
-.publication-links a,
-.publication-links span {
+.publication-links > a,
+.publication-links > span {
   padding: 3px 9px;
   border: 1px solid color-mix(in srgb, var(--home-accent) 34%, transparent);
   border-radius: 999px;
@@ -499,7 +499,7 @@
   text-decoration: none;
 }
 
-.publication-links span {
+.publication-links > span {
   color: var(--home-ink-soft);
   border-color: var(--global-divider-color);
 }

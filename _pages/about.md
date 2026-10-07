@@ -10,6 +10,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
   <a href="#about"><span data-lang="en">About Me</span><span data-lang="zh" hidden>关于我</span></a>
   <a href="#research"><span data-lang="en">Research</span><span data-lang="zh" hidden>研究</span></a>
   <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh" hidden>论文</span></a>
+  <a href="{{ "/projects/" | relative_url }}"><span data-lang="en">Projects</span><span data-lang="zh" hidden>项目</span></a>
   <a href="#hobbies"><span data-lang="en">Hobbies</span><span data-lang="zh" hidden>爱好</span></a>
   <a href="#contact"><span data-lang="en">Contact</span><span data-lang="zh" hidden>联系</span></a>
 </nav>
@@ -73,7 +74,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
     <div class="research-feature-overview">
       <div data-lang="en">
         <span class="research-kicker">NeurIPS 2026</span>
-        <h3>Feature Information Dynamics in Diffusion</h3>
+      <h3>Feature Information Dynamics in Diffusion</h3>
         <p>Using the <strong>I-MMSE relation</strong>, we define <strong>feature information density</strong> during diffusion for <strong>any feature</strong> in <strong>any representation space</strong>, quantifying <strong>the order in which different features emerge</strong>.</p>
         <p>Across the four representation spaces we study, <strong>only RAE exhibits the class → mask → Canny order</strong>, and diffusion models converge fastest in this space. We hypothesize that <strong>these ordered feature dynamics help explain its faster convergence</strong>.</p>
       </div>
@@ -83,6 +84,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
         <p>利用 <strong>I-MMSE 关系</strong>，我们定义了<strong>任意表示空间</strong>上、<strong>任意特征</strong>在扩散中的<strong>特征信息密度</strong>，以量化<strong>不同特征在扩散过程中的出现顺序</strong>。</p>
         <p>在我们研究的四种表示空间中，<strong>只有 RAE 呈现类别 → mask → Canny 的顺序</strong>，且其上的扩散模型收敛最快。我们猜测，<strong>这种有序的特征动力学可能解释其更快的训练收敛</strong>。</p>
       </div>
+      <p class="publication-links"><a href="{{ '/feature-information-dynamics/' | relative_url }}"><span data-lang="en">Project page →</span><span data-lang="zh" hidden>项目主页 →</span></a></p>
     </div>
     <figure class="research-figure">
       <a href="{{ '/assets/pdf/fid-demo-pixel-curves.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">
@@ -185,7 +187,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
   <div class="publication-list">
     <article class="publication-card">
       <p class="publication-venue">NeurIPS 2026</p>
-        <h3>Feature Information Dynamics in Diffusion</h3>
+      <h3>Feature Information Dynamics in Diffusion</h3>
       <p class="publication-authors"><strong>Jia-Shu Pan</strong>, Tao Zhang, Yufei Huang, Yanjun Sheng, Tailin Wu</p>
       <p class="publication-summary" data-lang="en">
         A quantitative framework for locating hierarchical features along diffusion trajectories and relating their temporal organization to representation-dependent convergence.
@@ -195,7 +197,8 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
       </p>
       <div class="publication-links">
         <a href="{{ "/feature-information-dynamics/" | relative_url }}"><span data-lang="en">Project page</span><span data-lang="zh" hidden>项目主页</span></a>
-        <span><span data-lang="en">Manuscript coming soon</span><span data-lang="zh" hidden>论文即将公开</span></span>
+        <a href="https://arxiv.org/abs/2610.08626" target="_blank" rel="noopener noreferrer">arXiv</a>
+        <a href="https://github.com/AI4Science-WestlakeU/feature-information-dynamics" target="_blank" rel="noopener noreferrer">Code</a>
       </div>
     </article>
 
@@ -211,7 +214,6 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
         VFScale 将扩散模型自身的能量训练为验证器，并结合混合蒙特卡洛树搜索，在迷宫与数独任务上实现无需外部验证器的测试时扩展。
       </p>
       <div class="publication-links">
-        <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/6188c02ccc16a7587716de2efd754033-Abstract-Conference.html" target="_blank" rel="noopener noreferrer">ICLR 2026</a>
         <a href="https://arxiv.org/abs/2502.01989" target="_blank" rel="noopener noreferrer">arXiv</a>
         <a href="https://github.com/AI4Science-WestlakeU/VFScale" target="_blank" rel="noopener noreferrer">Code</a>
       </div>
