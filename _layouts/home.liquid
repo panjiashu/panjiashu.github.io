@@ -5,7 +5,7 @@
   </head>
 
   <body class="homepage">
-    <a class="home-skip-link" href="#about">
+    <a class="home-skip-link" href="{% if page.layout == 'home-subpage' %}#page-content{% else %}#about{% endif %}">
       <span data-lang="en">Skip to content</span>
       <span data-lang="zh" hidden>跳到正文</span>
     </a>
@@ -60,11 +60,7 @@
           </div>
 
           {% if site.enable_darkmode %}
-            <button id="light-toggle" class="home-theme-toggle" type="button" title="Change theme" aria-label="Change color theme">
-              <i class="ti ti-sun-moon" id="light-toggle-system" aria-hidden="true"></i>
-              <i class="ti ti-moon-filled" id="light-toggle-dark" aria-hidden="true"></i>
-              <i class="ti ti-sun-filled" id="light-toggle-light" aria-hidden="true"></i>
-            </button>
+            {% include theme-toggle.liquid %}
           {% endif %}
         </div>
       </aside>

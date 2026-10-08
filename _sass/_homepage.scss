@@ -656,3 +656,36 @@ html[data-theme="dark"] .publication-card:hover {
     transition: none;
   }
 }
+
+// Research subpages share the homepage shell and controls.
+.home-anchor-nav a[aria-current="page"] { color: var(--home-accent); }
+.home-subpage .project-card { border: 1px solid var(--global-divider-color); border-radius: 12px; overflow: hidden; background: var(--global-bg-color); }
+.home-subpage .project-card img { display: block; width: 100%; height: 260px; object-fit: contain; background: #fff; padding: 20px; }
+.home-subpage .project-card-body { padding: 24px; border-top: 1px solid var(--global-divider-color); }
+.home-subpage .project-card h2 { font-size: 1.2rem; font-weight: 400; line-height: 1.5; margin: 0 0 12px; }
+.home-subpage .project-card p { margin: 0 0 16px; }
+.home-subpage .project-venue { font-size: .76rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--home-accent); }
+body.homepage .home-subpage .publications h2.bibliography { color: var(--home-ink-soft); font-size: 1rem; font-weight: 400; border-bottom: 1px solid var(--global-divider-color); padding-bottom: 10px; }
+body.homepage .home-subpage .publications ol.bibliography li { border: 1px solid var(--global-divider-color); border-radius: 12px; padding: 20px; margin-bottom: 18px; }
+body.homepage .home-subpage .publications .title { font-weight: 400; font-size: 1.1rem; line-height: 1.5; }
+body.homepage .home-subpage .publications .abbr abbr { background: var(--home-accent); }
+body.homepage .home-subpage .publications .links a.btn { border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--home-accent); font-size: .76rem; padding: 3px 9px; box-shadow: none; }
+@media (max-width: 600px) { .home-subpage .project-card img { height: 200px; } .home-subpage .project-card-body { padding: 20px; } }
+
+body.homepage .home-subpage .publications .abbr abbr { background: var(--home-accent); box-shadow: none; }
+body.homepage .home-subpage .publications .preview { box-shadow: none !important; border: 1px solid var(--global-divider-color); }
+@media (max-width: 600px) {
+  .homepage:has(.home-subpage) .home-portrait { width: 120px; }
+  .homepage:has(.home-subpage) .home-name-block { margin-top: 16px; }
+  .homepage:has(.home-subpage) .home-shell { row-gap: 28px; }
+}
+
+// The same visible three-state control is used on home, research pages and blog.
+#light-toggle.site-theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  width: auto; height: 34px; padding: 5px 10px; overflow: visible;
+  border: 1px solid var(--global-divider-color); border-radius: 999px;
+  background: var(--global-card-bg-color); color: var(--global-text-color);
+  font: inherit; font-size: 14px; cursor: pointer;
+}
+#light-toggle.site-theme-toggle svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.6; }

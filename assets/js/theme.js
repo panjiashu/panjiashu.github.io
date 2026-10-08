@@ -51,6 +51,7 @@ let applyTheme = () => {
   }
 
   document.documentElement.setAttribute("data-theme", theme);
+  updateThemeToggle();
 
   // Add class to tables.
   let tables = document.getElementsByTagName("table");
@@ -231,6 +232,16 @@ let determineComputedTheme = () => {
   }
 };
 
+let updateThemeToggle = () => {
+  const button = document.getElementById("light-toggle");
+  if (!button) return;
+  const setting = determineThemeSetting();
+  const label = button.querySelector(".theme-label");
+  if (label) label.textContent = setting[0].toUpperCase() + setting.slice(1);
+  button.setAttribute("aria-label", "Color theme: " + setting + ". Change theme");
+  button.title = "Color theme: " + setting + " (click to change)";
+};
+
 let initTheme = () => {
   let themeSetting = determineThemeSetting();
 
@@ -240,9 +251,18 @@ let initTheme = () => {
   document.addEventListener("DOMContentLoaded", function () {
     const mode_toggle = document.getElementById("light-toggle");
 
+    updateThemeToggle();
+    if (!mode_toggle) return;
     mode_toggle.addEventListener("click", function () {
       toggleThemeSetting();
     });
+  });
+
+  window.addEventListener("storage", (event) => {
+    if (event.key === "theme") {
+      document.documentElement.setAttribute("data-theme-setting", determineThemeSetting());
+      applyTheme();
+    }
   });
 
   // Add event listener to the system theme preference change.

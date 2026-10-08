@@ -1,0 +1,8 @@
+---
+layout: home
+---
+{% include site-navigation.liquid %}
+<section class="home-section home-subpage" id="page-content">
+  <header class="home-section-header"><h2><span data-lang="en">{{ page.title }}</span><span data-lang="zh" hidden>{{ page.title_zh | default: page.title }}</span></h2></header>
+  {{ content }}
+</section>

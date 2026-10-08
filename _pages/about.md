@@ -6,14 +6,7 @@ last_updated: 2026-10-06
 description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the interaction between data structure and model learning.
 ---
 
-<nav class="home-anchor-nav" aria-label="Homepage sections">
-  <a href="#about"><span data-lang="en">About Me</span><span data-lang="zh" hidden>关于我</span></a>
-  <a href="#research"><span data-lang="en">Research</span><span data-lang="zh" hidden>研究</span></a>
-  <a href="#publications"><span data-lang="en">Publications</span><span data-lang="zh" hidden>论文</span></a>
-  <a href="{{ "/projects/" | relative_url }}"><span data-lang="en">Projects</span><span data-lang="zh" hidden>项目</span></a>
-  <a href="#hobbies"><span data-lang="en">Hobbies</span><span data-lang="zh" hidden>爱好</span></a>
-  <a href="#contact"><span data-lang="en">Contact</span><span data-lang="zh" hidden>联系</span></a>
-</nav>
+{% include site-navigation.liquid %}
 
 <section id="about" class="home-section">
   <header class="home-section-header">
@@ -120,7 +113,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           Intuitively, \(D_Y(\gamma)\) distributes the total information about \(Y\) along the SNR axis: it measures how much additional feature information becomes accessible from an infinitesimal increase in SNR. A peak therefore identifies the noise level at which that feature is revealed most rapidly during denoising.
         </p>
         <p>
-          At any fixed SNR, a feature-conditional denoiser has access to \(Y\) in addition to \(X_\gamma\). Since it can always ignore this extra condition, its best achievable denoising loss \(m_Y(\gamma)\) cannot exceed the optimal unconditional loss \(m_\varnothing(\gamma)\). Using the I-MMSE identity, we show that feature information density is exactly half of this <strong>reduction in optimal denoising loss brought by feature conditioning</strong>:
+          Let \(m_\varnothing(\gamma)\) and \(m_Y(\gamma)\) denote the optimal unconditional and feature-conditional denoising losses (MMSE). Conditioning cannot increase this loss. I-MMSE connects feature information density to their difference:
         </p>
         <div class="research-equation" aria-label="Feature information density equation">
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]
@@ -145,7 +138,7 @@ description: Jia-Shu Pan is a Ph.D. student at Westlake University studying the 
           直观上，\(D_Y(\gamma)\) 将关于 \(Y\) 的总信息量分布到信噪比轴上：它衡量信噪比增加无穷小量时，我们能从数据中多获得多少关于该特征的信息。因此，曲线的峰值对应这一特征在去噪过程中显现得最快的噪声水平。
         </p>
         <p>
-          在任意固定的信噪比上，特征条件去噪器除了 \(X_\gamma\) 之外还能使用 \(Y\)。由于它总可以选择忽略这一额外条件，其能够达到的最优去噪损失 \(m_Y(\gamma)\) 不会高于无条件去噪器的最优损失 \(m_\varnothing(\gamma)\)。我们利用 I-MMSE 关系证明，特征信息密度恰好等于这一<strong>特征条件带来的最优去噪损失下降</strong>的一半：
+          \(m_\varnothing(\gamma)\) 和 \(m_Y(\gamma)\) 分别表示无条件与特征条件下的最优去噪损失（MMSE）。增加条件不会增大这一损失。I-MMSE 将特征信息密度与两者之差联系起来：
         </p>
         <div class="research-equation" aria-label="特征信息密度公式">
           \[D_Y(\gamma)=\frac{1}{2}\left[m_\varnothing(\gamma)-m_Y(\gamma)\right].\]

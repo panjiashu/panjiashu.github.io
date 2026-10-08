@@ -1,0 +1,5 @@
+<nav class="home-anchor-nav" aria-label="Site navigation">
+  <a href="{{ '/' | relative_url }}" {% if page.permalink == '/' %}aria-current="page"{% endif %}><span data-lang="en">Home</span><span data-lang="zh" hidden>首页</span></a>
+  <a href="{{ '/projects/' | relative_url }}" {% if page.permalink == '/projects/' %}aria-current="page"{% endif %}><span data-lang="en">Projects</span><span data-lang="zh" hidden>项目</span></a>
+  <a href="{{ '/publications/' | relative_url }}" {% if page.permalink == '/publications/' %}aria-current="page"{% endif %}><span data-lang="en">Publications</span><span data-lang="zh" hidden>论文</span></a>
+</nav>
