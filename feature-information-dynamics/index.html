@@ -51,8 +51,34 @@ html[data-theme="dark"] .charts svg path[stroke="#52677e"],html[data-theme="dark
 <script defer src="vendor/katex/katex.min.js"></script>
 <script defer src="vendor/katex/contrib/auto-render.min.js"></script>
 <script defer src="vendor/render-math.js"></script>
-</head><body id="top">
-<header class="site-nav"><div class="nav-inner"><a class="brand" href="#top"><span class="brand-long">Feature Information Dynamics</span><span class="brand-short">Feature dynamics</span></a><nav class="nav-actions" aria-label="Site navigation"><a href="/">Home</a><a href="/projects/" aria-current="location">Projects</a><a href="/publications/">Publications</a><button class="theme-toggle" id="light-toggle" aria-label="Change color theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span class="theme-label">System</span></button></nav></div></header>
+<style>.pictures{grid-template-columns:repeat(4,minmax(0,1fr));align-items:start}.pictures>div{min-width:0;text-align:center}.pictures .picture-title{min-height:40px;display:flex;align-items:center;justify-content:center;margin-bottom:6px}.pictures img{display:block;margin:0 auto}.endpoints{align-items:center;gap:12px}#snr-readout{text-align:center;flex:1}.citation pre{white-space:pre-wrap;overflow-wrap:anywhere;margin-top:14px;font-size:13px}@media(max-width:560px){#snr-readout{font-size:10px}.endpoints{margin:4px 0}.pictures .picture-title{min-height:40px}}</style><style id="interaction-typography">
+.panel[aria-label="Interactive denoising demonstration"]{font-family:Arial,sans-serif;font-size:14px;line-height:1.5}
+.panel[aria-label="Interactive denoising demonstration"] .toolbar label,
+.panel[aria-label="Interactive denoising demonstration"] select,
+.panel[aria-label="Interactive denoising demonstration"] .readout,
+.panel[aria-label="Interactive denoising demonstration"] .picture-title,
+.panel[aria-label="Interactive denoising demonstration"] .chart-title,
+.panel[aria-label="Interactive denoising demonstration"] .chart-formula{font-family:Arial,sans-serif;font-size:14px;font-weight:400}
+.panel[aria-label="Interactive denoising demonstration"] .chart-title{min-height:42px;display:flex;align-items:flex-start;gap:6px;line-height:1.5}
+.panel[aria-label="Interactive denoising demonstration"] .chart-title b{font:400 12px/21px Arial,sans-serif;flex:0 0 21px;background:transparent;color:inherit;border:1px solid var(--line);margin:0;text-align:center}
+.panel[aria-label="Interactive denoising demonstration"] .chart-caption,
+.panel[aria-label="Interactive denoising demonstration"] .demo-footnote,
+.panel[aria-label="Interactive denoising demonstration"] .hint,
+.panel[aria-label="Interactive denoising demonstration"] .endpoints,
+.panel[aria-label="Interactive denoising demonstration"] #snr-readout,
+.panel[aria-label="Interactive denoising demonstration"] .stages button{font-family:Arial,sans-serif;font-size:12px;font-weight:400;line-height:1.5}
+.panel[aria-label="Interactive denoising demonstration"] .charts svg text{font-family:Arial,sans-serif;font-size:12px;font-weight:400}
+.panel[aria-label="Interactive denoising demonstration"] .chart-formula .katex{font-size:1em}
+.panel[aria-label="Interactive denoising demonstration"] .readout span{font-size:inherit;font-weight:400}
+@media(max-width:560px){.panel[aria-label="Interactive denoising demonstration"] .pictures{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.panel[aria-label="Interactive denoising demonstration"] .toolbar{flex-direction:column;align-items:flex-start}.panel[aria-label="Interactive denoising demonstration"] .readout{max-width:none;text-align:left}.panel[aria-label="Interactive denoising demonstration"] .endpoints{flex-wrap:wrap}.panel[aria-label="Interactive denoising demonstration"] #snr-readout{order:3;flex-basis:100%}.panel[aria-label="Interactive denoising demonstration"] .endpoints>span:last-child{margin-left:auto}}
+</style><style id="language-style">
+.language-toggle{font-size:14px;padding:5px 10px;white-space:nowrap}
+html[lang="zh-CN"] body{font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif}
+html[lang="zh-CN"] .section p{line-height:1.8}
+html[lang="zh-CN"] .panel,html[lang="zh-CN"] .panel :is(label,select,.readout,.picture-title,.chart-title,.chart-caption,.demo-footnote,.hint,.endpoints,#snr-readout),html[lang="zh-CN"] .panel svg text{font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif}
+@media(max-width:540px){.nav-actions{gap:8px}.language-toggle{font-size:13px;padding:5px 7px}.brand-short{font-size:14px}}
+</style><style>@media(max-width:540px){.site-nav .brand{display:none}.nav-actions{width:100%;justify-content:space-between;gap:6px}.nav-inner{padding:10px 12px}.nav-actions .language-toggle,.nav-actions .theme-toggle{flex-shrink:0}}</style></head><body id="top">
+<header class="site-nav"><div class="nav-inner"><a class="brand" href="#top"><span class="brand-long">Feature Information Dynamics</span><span class="brand-short">Feature dynamics</span></a><nav class="nav-actions" aria-label="Site navigation"><a href="/">Home</a><a href="/projects/" aria-current="location">Projects</a><a href="/publications/">Publications</a><button id="language-toggle" class="language-toggle" type="button" aria-label="切换到中文">中文</button><button class="theme-toggle" id="light-toggle" aria-label="Change color theme"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span class="theme-label">System</span></button></nav></div></header>
 <div class="hero"><h1><span>Feature Information Dynamics</span><br>in Diffusion</h1><p class="subtitle">When does diffusion generate each feature<br>in an arbitrary representation space?</p><p class="hero-finding">Representation choice changes the generation order of diffusion models.</p><p class="authors"><span class="author">Jia-Shu Pan<sup>1</sup></span>, <span class="author">Tao Zhang<sup>1,2</sup></span>, <span class="author">Yufei Huang<sup>1,2</sup></span>, <span class="author">Yanjun Sheng<sup>3</sup></span>, <span class="author">Tailin Wu<sup>1</sup></span></p><p class="affiliations"><sup>1</sup> Westlake University &nbsp; <sup>2</sup> Zhejiang University &nbsp; <sup>3</sup> Australian National University</p><div class="resource-links"><a href="https://arxiv.org/pdf/2610.08626" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6zM14 3v5h4M9 13h6M9 17h6"/></svg><span>PDF</span></a><a href="https://arxiv.org/abs/2610.08626" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">↗</span><span>arXiv</span></a><a href="https://github.com/AI4Science-WestlakeU/feature-information-dynamics" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-12-2 14"/></svg><span>Code</span></a><a href="#citation"><span aria-hidden="true">{ }</span><span>BibTeX</span></a></div></div>
 <div class="page-layout"><main class="site-main"><details class="mobile-toc"><summary>Contents · <span id="current-section">Overview</span></summary><nav class="toc-links" aria-label="Contents"><a href="#overview">Overview</a><a href="#perspective">An autoregressive view of diffusion</a><a href="#dynamics">Feature information density</a><a href="#chain">Chained information decomposition</a><a href="#representations">Representations change generation order</a><a href="#closing">Closing thoughts</a></nav></details><section class="overview" id="overview"><p class="section-number">TL;DR</p><p>Feature information density uses optimal denoising losses to locate when features emerge. Chained decomposition reveals their order. Across image representations, that order changes; RAE exhibits an abstract-to-concrete hierarchy. Finding the optimal generation order and representation for each modality is an interesting future direction.</p></section>
 <section class="section" id="perspective"><div class="section-intro"><h2>An autoregressive view of diffusion</h2>
@@ -64,13 +90,13 @@ html[data-theme="dark"] .charts svg path[stroke="#52677e"],html[data-theme="dark
 <p class="notation-lead">Here \(m_S(\gamma)\) is the <strong>minimum x-prediction loss (MMSE)</strong> given condition \(S\). Below, \(Y\) is the MNIST digit class. The <strong>unconditional denoiser</strong> predicts the clean image from the noisy image alone; the <strong>class-conditional denoiser</strong> also receives its class label. Their optimal losses are \(m_{\varnothing}\) and \(m_Y\), respectively.</p>
 <section class="panel" aria-label="Interactive denoising demonstration">
 <div class="toolbar"><div><label for="sample">Example</label> <select id="sample"></select></div><div class="readout" id="level" aria-live="polite"></div></div>
-<div class="pictures"><div><div class="picture-title">Clean reference</div><img id="clean" alt="Clean MNIST digit"></div><div><div class="picture-title">Noisy observation</div><img id="noisy" alt="Noisy digit at selected SNR"></div><div><div class="picture-title">Unconditional</div><img id="unconditional" alt="Unconditional clean-image prediction"></div><div><div class="picture-title">Class-conditional</div><img id="conditional" alt="Class-conditioned clean-image prediction"><span id="class-caption" class="sr-only"></span></div></div>
+<div class="pictures"><div><div class="picture-title">Clean reference</div><img id="clean" alt="Clean MNIST digit"></div><div><div class="picture-title">Noisy observation</div><img id="noisy" alt="Noisy digit at selected SNR"></div><div><div class="picture-title">Unconditional denoiser</div><img id="unconditional" alt="Unconditional clean-image prediction"></div><div><div class="picture-title">Class-conditional denoiser</div><img id="conditional" alt="Class-conditioned clean-image prediction"><span id="class-caption" class="sr-only"></span></div></div>
 <div class="control"><button id="previous" aria-label="Previous SNR frame">←</button><input id="slider" type="range" min="-5" max="3" step="0.01" value="-1" aria-label="log10 SNR"><button id="next" aria-label="Next SNR frame">→</button></div>
-<div class="endpoints"><span>−5 · noise</span><span>3 · signal</span></div>
-<div class="stage-row"><span class="hint">Jump to accumulated information</span><div class="stages" id="stages" role="group" aria-label="Choose information stage"></div></div>
+<div class="endpoints"><span>−5 · noise</span><span id="snr-readout"></span><span>3 · signal</span></div>
+
 <div class="charts">
 <div class="chart-step"><div class="chart-title"><b>1</b> Denoising loss (x-pred loss)</div><p class="chart-formula">\(m_{\varnothing},\;m_Y\)</p><svg id="risk" viewBox="0 0 460 280" role="img" aria-label="Unconditional and class-conditional denoising losses"></svg><p class="chart-caption"><span style="color:#52677e">━ Unconditional</span><br><span style="color:#087f8c">━ Class-conditional</span><br>Both curves fall with SNR; their shaded separation is the conditioning gain.</p></div>
-<div class="chart-step"><div class="chart-title"><b>2</b> MMSE gap</div><p class="chart-formula">\(\Delta_Y\coloneqq m_{\varnothing}-m_Y\)</p><svg id="gap" viewBox="0 0 460 280" role="img" aria-label="Estimated MMSE gap"></svg><p class="chart-caption">Subtract the two optimal losses.</p></div>
+<div class="chart-step"><div class="chart-title"><b>2</b> Loss gap</div><p class="chart-formula">\(\Delta_Y\coloneqq m_{\varnothing}-m_Y\)</p><svg id="gap" viewBox="0 0 460 280" role="img" aria-label="Estimated MMSE gap"></svg><p class="chart-caption">Subtract the two optimal losses.</p></div>
 <div class="chart-step"><div class="chart-title"><b>3</b> Feature information density</div><p class="chart-formula">\(D_Y^{(\ln\gamma)}=\frac{\gamma}{2}\Delta_Y\)</p><svg id="plot" viewBox="0 0 460 280" role="img" aria-label="Class information density"></svg><p class="chart-caption">The rate of class information gain along log-SNR. Its peak locates the fastest emergence.</p></div>
 <div class="chart-step"><div class="chart-title"><b>4</b> Accumulated class information</div><p class="chart-formula">\(\begin{aligned}&\int_{-\infty}^{\ln\gamma}D_Y^{(\ln\gamma)}(u)\,du\\&\qquad=I(Y;X_\gamma)\end{aligned}\)</p><svg id="cumulative" viewBox="0 0 460 280" role="img" aria-label="Accumulated class information in nats"></svg><p class="chart-caption">Integrate feature information density over ln SNR up to the selected SNR.</p></div></div>
 <p class="hint demo-footnote">Drag the slider or click a curve to explore. Images show one digit; curves average the full test set. Measured losses estimate MMSE.</p></section>
@@ -108,7 +134,7 @@ const get=id=>document.getElementById(id),select=get('sample'),slider=get('slide
 const nearest=v=>data.levels.reduce((best,a,i)=>Math.abs(a-v)<Math.abs(data.levels[best]-v)?i:best,0);
 let selected=nearest(data.stageLevels[4]);
 data.samples.forEach((s,i)=>{const o=document.createElement('option');o.value=i;o.textContent='Digit '+s.digit;select.appendChild(o)});
-const stageButtons=data.targets.map((t,i)=>{const b=document.createElement('button');b.textContent=(totalInformation*t).toFixed(2)+' nats';b.setAttribute('aria-label','Select '+Math.round(100*t)+' percent information stage');b.addEventListener('click',()=>choose(nearest(data.stageLevels[i])));get('stages').appendChild(b);return b});
+const stageButtons=data.targets.map((t,i)=>{const b=document.createElement('button');b.textContent=(totalInformation*t).toFixed(2)+' nats';b.setAttribute('aria-label','Select '+Math.round(100*t)+' percent information stage');b.addEventListener('click',()=>choose(nearest(data.stageLevels[i])));return b});
 const x=v=>66+(v+5)/8*374;
 function interpolate(values,v){if(v<=data.grid[0])return values[0];const j=data.grid.findIndex(g=>g>=v),f=(v-data.grid[j-1])/(data.grid[j]-data.grid[j-1]);return values[j-1]*(1-f)+values[j]*f}
 function chart(id,values,color,percentage,second=null){
@@ -125,7 +151,7 @@ get(id).innerHTML=`${marks}${shading}${curve(values,color)}${second?curve(second
 }
 function choose(i){selected=Math.max(0,Math.min(data.levels.length-1,i));update()}
 function update(){const s=data.samples[Number(select.value)],v=data.levels[selected],p=interpolate(data.progress,v);['noisy','unconditional','conditional'].forEach((id,j)=>get(id).src=s.frames[selected][j]);get('clean').src=s.clean;get('class-caption').textContent='Conditioned on class '+s.digit;
-slider.value=v;get('level').innerHTML=`Class generation progress: ${(p*totalInformation).toFixed(2)} / ${totalInformation.toFixed(2)} nats (${(100*p).toFixed(1)}%) <span>· log<sub>10</sub> <i>γ</i> = ${v.toFixed(2)}</span>`;slider.setAttribute('aria-valuetext','log10 SNR '+v.toFixed(2)+', '+(100*p).toFixed(1)+' percent class generation progress');stageButtons.forEach((b,j)=>b.setAttribute('aria-pressed',String(Math.abs(v-data.stageLevels[j])<1e-8)));get('previous').disabled=selected===0;get('next').disabled=selected===data.levels.length-1;chart('risk',data.risks[0],'#52677e',false,data.risks[1]);chart('gap',data.gap,'#52677e',false);chart('plot',data.progressDensity,'#087f8c',false);chart('cumulative',accumulated,'#ba6515',false);}
+get('snr-readout').innerHTML='log<sub>10</sub> Signal-to-noise ratio · log<sub>10</sub> <i>γ</i> = '+v.toFixed(2);slider.value=v;get('level').innerHTML=`Class generation progress: ${(p*totalInformation).toFixed(2)} / ${totalInformation.toFixed(2)} nats (${(100*p).toFixed(1)}%)`;slider.setAttribute('aria-valuetext','log10 SNR '+v.toFixed(2)+', '+(100*p).toFixed(1)+' percent class generation progress');stageButtons.forEach((b,j)=>b.setAttribute('aria-pressed',String(Math.abs(v-data.stageLevels[j])<1e-8)));get('previous').disabled=selected===0;get('next').disabled=selected===data.levels.length-1;chart('risk',data.risks[0],'#52677e',false,data.risks[1]);chart('gap',data.gap,'#52677e',false);chart('plot',data.progressDensity,'#087f8c',false);chart('cumulative',accumulated,'#ba6515',false);}
 slider.addEventListener('input',()=>choose(nearest(Number(slider.value))));slider.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowDown','ArrowUp','Home','End'].includes(e.key)){e.preventDefault();choose(e.key==='Home'?0:e.key==='End'?data.levels.length-1:selected+(['ArrowLeft','ArrowDown'].includes(e.key)?-1:1))}});select.addEventListener('change',update);get('previous').addEventListener('click',()=>choose(selected-1));get('next').addEventListener('click',()=>choose(selected+1));
 for(const id of ['risk','gap','plot','cumulative'])get(id).addEventListener('click',e=>{const box=get(id).getBoundingClientRect(),px=(e.clientX-box.left)/box.width*460,v=(px-66)/374*8-5;choose(nearest(v))});update();
 
@@ -141,4 +167,73 @@ let scrollQueued=false;
 function updateCurrentSection(){scrollQueued=false;const threshold=140;let current=sections[0];for(const section of sections){if(section.getBoundingClientRect().top<=threshold)current=section;}if(innerHeight+scrollY>=document.documentElement.scrollHeight-4)current=sections[sections.length-1];for(const link of tocLinks){if(link.hash==='#'+current.id)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');}document.getElementById('current-section').textContent=document.querySelector('.page-toc a[href="#'+current.id+'"]').textContent;}
 window.addEventListener('scroll',()=>{if(!scrollQueued){scrollQueued=true;requestAnimationFrame(updateCurrentSection)}},{passive:true});window.addEventListener('resize',updateCurrentSection);
 tocLinks.forEach(link=>link.addEventListener('click',()=>document.querySelector('.mobile-toc').open=false));updateCurrentSection();
-</script></body></html>
+</script><script>
+(function(){
+const charts=Array.from(document.querySelectorAll('.charts svg'));
+function sizeChart(svg){const width=svg.getBoundingClientRect().width;if(!width)return;const size=12*460/width;svg.querySelectorAll('text').forEach(text=>{text.style.fontSize=size+'px';});}
+charts.forEach(svg=>{sizeChart(svg);new MutationObserver(()=>sizeChart(svg)).observe(svg,{childList:true,subtree:true});new ResizeObserver(()=>sizeChart(svg)).observe(svg);});
+})();
+</script>
+<script id="project-language-script">
+(() => {
+const translations = {".brand-long": ["特征信息动力学"], ".brand-short": ["特征信息动力学"], ".nav-actions>a": ["首页", "项目", "论文"], ".hero h1": ["<span>扩散模型中的</span><br>特征信息动力学"], ".hero .subtitle": ["在不同的表示空间中，<br>扩散模型在什么时候生成哪些特征？"], ".hero-finding": ["表示的选择，会改变扩散模型中特征的生成顺序。"], ".affiliations": ["<sup>1</sup> 西湖大学 &nbsp; <sup>2</sup> 浙江大学 &nbsp; <sup>3</sup> 澳大利亚国立大学"], ".toc-title": ["目录"], ".toc-links a[href=\"#overview\"]": ["概览", "概览"], ".toc-links a[href=\"#perspective\"]": ["从自回归的角度看扩散", "从自回归的角度看扩散"], ".toc-links a[href=\"#dynamics\"]": ["特征信息密度", "特征信息密度"], ".toc-links a[href=\"#chain\"]": ["链式信息分解", "链式信息分解"], ".toc-links a[href=\"#representations\"]": ["表示改变生成顺序", "表示改变生成顺序"], ".toc-links a[href=\"#closing\"]": ["进一步的问题", "进一步的问题"], "#overview .section-number": ["概览"], "#overview p:not(.section-number)": ["特征信息密度回答：一个特征在什么时候生成？它可以通过最优去噪损失来计算。链式分解进一步给出多个特征的生成顺序。这个顺序依赖于表示；RAE 中出现了从抽象到具体的层次。每种模态是否都有合适的生成顺序和表示？"], "#perspective h2": ["从自回归的角度看扩散"], "#perspective p": ["自回归和扩散都把生成拆成更小的预测任务：前者逐元素预测，后者逐噪声水平去噪。扩散模型隐含的生成顺序是什么？", "在 <a href=\"https://sander.ai/2024/09/02/spectral-autoregression.html\" target=\"_blank\" rel=\"noopener\">Sander Dieleman 的博客</a>中，像素空间的扩散近似是<strong>低频到高频的自回归</strong>。这个解释依赖于自然图像近似幂律的频谱：低频的信号功率更大，所以在白高斯噪声下，有效信噪比更高，去噪时也更早出现。学习得到的隐表示不一定保留这种频谱结构，所以这个论证不能直接照搬。不同表示中的模型，收敛速度也明显不同。我们需要理解，每个表示空间里到底发生了什么。", "<strong>在不同的表示空间里，每个信噪比对应哪些特征的生成？</strong>我们先量化类别、Mask、Canny 边缘等特征的信息如何沿扩散过程分布，再研究多个特征的生成顺序。"], "#dynamics h2": ["特征信息密度"], "#dynamics .section-intro p": ["记 \\(X_\\gamma\\coloneqq\\sqrt{\\gamma}X+N\\) 为信噪比 \\(\\gamma\\) 下的含噪观测，其中 \\(N\\) 是独立的标准高斯噪声。互信息 \\(I(Y;X_\\gamma)\\) 衡量这个观测包含多少关于特征 \\(Y\\) 的信息。我们把它沿对数信噪比的变化率定义为<strong>特征信息密度</strong>。通过 I-MMSE 关系，这个变化率可以写成最优去噪损失之差："], "#dynamics>.notation-lead": ["这里，\\(m_S(\\gamma)\\) 是给定条件 \\(S\\) 时的<strong>最小 x-prediction 损失（MMSE）</strong>。下面以 MNIST 的数字类别作为 \\(Y\\)。<strong>无条件去噪器</strong>只根据含噪图像预测干净图像；<strong>类别条件去噪器</strong>还知道它的类别。两者的最优损失分别记作 \\(m_{\\varnothing}\\) 和 \\(m_Y\\)。"], "label[for=\"sample\"]": ["示例"], ".picture-title": ["干净图像", "含噪观测", "无条件去噪器", "类别条件去噪器"], ".chart-title": ["<b>1</b> 去噪损失（x-pred loss）", "<b>2</b> 损失差", "<b>3</b> 特征信息密度", "<b>4</b> 累积类别信息"], ".chart-caption": ["<span style=\"color:#52677e\">━ 无条件</span><br><span style=\"color:#087f8c\">━ 类别条件</span><br>两条曲线都随信噪比增大而下降。阴影部分是类别条件带来的损失下降。", "把两者的最优损失相减。", "类别信息沿对数信噪比增加的速率。峰值对应类别信息增长最快的位置。", "沿 ln SNR 对特征信息密度积分，得到截至当前信噪比的累积信息。"], ".demo-footnote": ["拖动滑条，或点击曲线。图像展示一个数字，曲线则对整个测试集取平均。实际测得的损失用于估计 MMSE。"], "#dynamics>.paper-ref a": ["§3.1–3.4 · MMSE、信息密度与估计", "查看 notebook"], "#chain h2": ["链式信息分解"], "#chain .section-intro p": ["不同特征之间有共享信息，所以独立测量会重复计算。<strong>链式信息分解</strong>关心的是：给定前面的特征，下一个特征还能增加多少信息？条件互信息 \\(I(X_\\gamma;Y_k\\mid Y_{\\lt k})\\) 衡量已知前面的特征时，含噪观测还能告诉我们多少关于下一个特征的信息："], "#chain>.notation-lead": ["这里，\\(m_k\\) 是给定前 \\(k\\) 个特征时的最优去噪损失，\\(m_0\\) 是无条件损失。"], "#chain>p:not(.notation-lead):not(.paper-ref)": ["我们把频率从低到高分组，应用这个分解。<strong>链式分解让频谱自回归可以被定量观察。</strong>独立测量时，不同频段的信息密度相互重叠；给定更低频的信息后，各频段新增信息的峰值按低频到高频依次出现。这样，我们就能沿信噪比定位各个频段的生成。"], "#chain .paper-ref a": ["§4 · 链式信息分解", "§5.1 · 频谱自回归"], "#representations h2": ["表示改变生成顺序"], "#representations .section-intro p": ["除了频率，我们还考虑更复杂的视觉特征层次：<strong>类别 → Mask → Canny</strong>。按照这个顺序加入条件，比较像素空间和三个隐空间中，每个特征的新增信息在什么时候出现。"], ".finding h3": ["像素：Mask 先于类别", "SDVAE：类别最后出现", "VAVAE：类别先出现，Mask 与 Canny 重叠", "RAE：类别 → Mask → Canny"], "#representations .paper-ref a": ["§5.2.2 · 表示诊断"], "#closing h2": ["每种模态都有合适的生成顺序吗？"], "#closing>p:not(.paper-ref)": ["<a href=\"https://arxiv.org/html/2506.19935v2\" target=\"_blank\" rel=\"noopener\">AO-GPT</a> 发现，语言建模从左到右生成，比按固定的随机顺序生成收敛快得多。他们将这个差别归因于语言的序列结构。", "在我们的实验中，RAE 空间的生成顺序是类别 → Mask → Canny；在这个空间中训练，也比在像素、SDVAE 和 VAVAE 空间中收敛更快。<strong>我们猜想，图像可能更适合从抽象到具体地生成。</strong>", "怎样找到每种模态合适的生成顺序？这些顺序能否帮助我们设计下一代生成模型？", "我目前在研究这些问题。如果你也感兴趣，欢迎<a href=\"mailto:panjiashu@westlake.edu.cn\">联系我</a>。"], "#closing .paper-ref a": ["受控收敛实验", "§6.1 · 生成顺序"], "#citation h2": ["引用"], ".page-footer": ["扩散模型中的特征信息动力学 · <a href=\"mailto:panjiashu@westlake.edu.cn\">联系</a> · <a href=\"https://github.com/AI4Science-WestlakeU/feature-information-dynamics\" target=\"_blank\" rel=\"noopener noreferrer\">官方实现</a>。"], ".resource-links>a>span:last-child": ["PDF", "arXiv", "代码", "BibTeX"]};
+const originals = new Map();
+for (const [selector, values] of Object.entries(translations)) {
+  const nodes = [...document.querySelectorAll(selector)];
+  if (nodes.length !== values.length) console.error('Translation count mismatch', selector, nodes.length, values.length);
+  nodes.forEach((node, i) => originals.set(node, {en:node.innerHTML, zh:values[i]}));
+}
+const button = document.getElementById('language-toggle');
+const nativeUpdate = update;
+const nativeTheme = applyPageTheme;
+let language = 'en';
+function chinese(){return language === 'zh';}
+function renderLocalizedMath(nodes){
+  if (!window.renderMathInElement) return;
+  for (const node of nodes) renderMathInElement(node, {delimiters:[{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}],throwOnError:false});
+}
+update = function(){
+  nativeUpdate();
+  const sample = data.samples[Number(select.value)], v=data.levels[selected], p=interpolate(data.progress,v);
+  get('snr-readout').innerHTML=(chinese()?'log<sub>10</sub> 信噪比':'log<sub>10</sub> Signal-to-noise ratio')+' · log<sub>10</sub> <i>γ</i> = '+v.toFixed(2);
+  get('level').textContent=(chinese()?'类别生成进度：':'Class generation progress: ')+(p*totalInformation).toFixed(2)+' / '+totalInformation.toFixed(2)+' nats ('+(100*p).toFixed(1)+'%)';
+  get('class-caption').textContent=chinese()?'给定类别 '+sample.digit:'Conditioned on class '+sample.digit;
+  slider.setAttribute('aria-valuetext',chinese()?'对数信噪比 '+v.toFixed(2)+'，类别生成进度 '+(100*p).toFixed(1)+'%':'log10 SNR '+v.toFixed(2)+', '+(100*p).toFixed(1)+' percent class generation progress');
+  if(chinese()) for(const svg of document.querySelectorAll('.charts svg')) for(const t of svg.querySelectorAll('text')) if(t.textContent==='Squared error')t.textContent='平方误差';
+};
+applyPageTheme = function(setting){
+  nativeTheme(setting);
+  if(chinese()) { themeButton.querySelector('.theme-label').textContent={system:'系统',light:'浅色',dark:'深色'}[setting];themeButton.setAttribute('aria-label','切换颜色主题'); }
+};
+function setLanguage(next){
+  language = next === 'zh' ? 'zh':'en';
+  document.documentElement.lang = chinese()?'zh-CN':'en';
+  document.title = chinese()?'扩散模型中的特征信息动力学':'Feature Information Dynamics in Diffusion';
+  const changed=[];
+  for (const [node, value] of originals) {node.innerHTML=value[language];changed.push(node);}
+  renderLocalizedMath(changed);
+  button.textContent=chinese()?'English':'中文';
+  button.setAttribute('aria-label',chinese()?'Switch to English':'切换到中文');
+  button.title=button.getAttribute('aria-label');
+  document.querySelector('.mobile-toc summary').firstChild.textContent=chinese()?'目录 · ':'Contents · ';
+  document.querySelector('.endpoints>span:first-child').textContent=chinese()?'−5 · 噪声':'−5 · noise';
+  document.querySelector('.endpoints>span:last-child').textContent=chinese()?'3 · 信号':'3 · signal';
+  [...select.options].forEach((o,i)=>o.textContent=(chinese()?'数字 ':'Digit ')+data.samples[i].digit);
+  const attrs = [
+    ['#previous','aria-label','Previous SNR frame','上一个信噪比'],['#next','aria-label','Next SNR frame','下一个信噪比'],
+    ['#slider','aria-label','log10 SNR','对数信噪比'],['#clean','alt','Clean MNIST digit','干净的 MNIST 数字'],
+    ['#noisy','alt','Noisy digit at selected SNR','当前信噪比下的含噪数字'],['#unconditional','alt','Unconditional clean-image prediction','无条件去噪预测'],['#conditional','alt','Class-conditioned clean-image prediction','类别条件去噪预测'],
+    ['#risk','aria-label','Unconditional and class-conditional denoising losses','无条件与类别条件去噪损失'],['#gap','aria-label','Estimated loss gap','估计的损失差'],['#plot','aria-label','Class information density','类别信息密度'],['#cumulative','aria-label','Accumulated class information in nats','累积类别信息，单位 nats']
+  ];
+  for(const [selector,attr,en,zh] of attrs)document.querySelector(selector).setAttribute(attr,chinese()?zh:en);
+  update();applyPageTheme(document.documentElement.dataset.themeSetting);updateCurrentSection();
+  try{localStorage.setItem('homepage-language',language);}catch(e){}
+}
+button.addEventListener('click',()=>setLanguage(chinese()?'en':'zh'));
+let initial='en';try{initial=localStorage.getItem('homepage-language')||'en';}catch(e){}
+const requested=new URLSearchParams(location.search).get('lang');
+setLanguage(requested || initial);
+document.addEventListener('DOMContentLoaded',()=>renderLocalizedMath([...originals.keys()]));
+})();
+</script>
+</body></html>
